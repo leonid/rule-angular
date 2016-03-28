@@ -1,0 +1,52 @@
+<div class="aside fade-in" tabindex="-1" role="dialog">
+    <div class="aside-dialog">
+        <div class="aside-content">
+            <div class="aside-header" ng-show="title">
+                <button type="button" class="close"
+                        ng-click="$hide()">&times;</button>
+                <h4 class="aside-title" ng-bind-html="title"></h4>
+            </div>
+            <div class="aside-body">
+
+                <div class="panel-body">
+                    <h3>{{vm.attribute.data.name}}</h3>
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Идентификатор</td>
+                            <td>{{vm.attribute.data.id}}</td>
+                        </tr>
+                        <tr>
+                            <td>Label</td>
+                            <td>{{vm.attribute.data.label}}</td>
+                        </tr>
+                        <tr>
+                            <td>Наименование</td>
+                            <td>{{vm.attribute.data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>structureType</td>
+                            <td>{{vm.attribute.data.structureType}}</td>
+                        </tr>
+                        <tr>
+                            <td>Label</td>
+                            <td>{{vm.attribute.data.label}}</td>
+                        </tr>
+                        <tr>
+                            <td>Тип</td>
+                            <td>
+                                id = {{vm.attribute.data.type.id}}<br/>
+                                name = {{vm.attribute.data.type.name}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="aside-footer">
+                <button type="button" class="btn btn-default"
+                        ng-click="$hide()">Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

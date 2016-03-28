@@ -1,0 +1,45 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <button type="button" class="close"
+                        ng-click="$hide()">&times;</button>
+                <h4 class="modal-title" ng-bind-html="title"></h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel-body">
+                    <h3>{{vm.resource.data.name}}</h3>
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Идентификатор</td>
+                            <td>{{vm.resource.data.id}}</td>
+                        </tr>
+                        <tr>
+                            <td>Наименование</td>
+                            <td>{{vm.resource.data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Короткий заголовок</td>
+                            <td>{{vm.resource.data.shortName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Label</td>
+                            <td>{{vm.resource.data.label}}</td>
+                        </tr>
+                        <tr>
+                            <td>Тип</td>
+                            <td>{{vm.resource.data.type}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        ng-click="$hide()">Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

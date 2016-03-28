@@ -1,0 +1,11 @@
+{
+  "id": "404579ce-e6a0-49d0-a9e5-2a1d0c6fc64c",
+  "label": "shortName",
+  "name": "Сокращенное наименование",
+  "type": {
+    "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+    "name": "string"
+  },
+  "keyType": null,
+  "structureType": "VALUE"
+}

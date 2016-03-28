@@ -1,0 +1,93 @@
+<nav class="navbar navbar-blue navbar-static-top" role="navigation" bs-navbar>
+
+    <div ng-show="$root.showPending" class="pps-request-indicator"></div>
+
+    <ul class="nav navbar-nav nav-hover">
+        <li ui-sref-active="active" class="navbar-header">
+            <a ui-sref="pps.main"
+               class="navbar-brand ng-binding">Редактор</a>
+        </li>
+        <li ui-sref-active="active"
+            mm-access-level="$root.ACCESS_LEVELS.public">
+            <a ui-sref="app.plan">План</a>
+        </li>
+        <li ui-sref-active="active"><a ui-sref="pps.attributes">Атрибуты</a>
+        </li>
+        <li ui-sref-active="active" class=""><a ui-sref="auth.login">Профиль</a>
+        </li>
+    </ul>
+    <ul style="margin-right: 0" class="nav navbar-nav navbar-right nav-hover">
+        <li
+                data-title="Настройки"
+                data-placement="left"
+                data-container="body"
+                bs-tooltip
+                class="dropdown">
+            <a href=""
+               data-placement="bottom-right"
+               class="dropdown-hover nav-big-icon"
+               bs-dropdown>
+                <span class="glyphicon glyphicon-cog"></span>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li ui-sref-active="active" class=""><a ui-sref="systems">Реестр
+                    информационных систем</a></li>
+                <li ui-sref-active="active" class=""><a
+                        ui-sref="settings.exchange">Регламент синхронизации и
+                    выгрузки
+                    данных</a></li>
+                <li ui-sref-active="active" class=""><a
+                        ui-sref="settings.audit">Аудит синхронизации и выгрузки
+                    данных</a></li>
+                <li ui-sref-active="active" class=""><a
+                        ui-sref="settings.indexing">Переиндексация</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"
+            data-title="Справочные материалы"
+            data-trigger="hover focus"
+            data-placement="left"
+            data-container="body"
+            bs-tooltip>
+            <a href=""
+               data-placement="bottom-right"
+               class="dropdown-hover nav-big-icon"
+               bs-dropdown>
+                <span class="glyphicon glyphicon-question-sign"></span>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a ui-sref="pps.help" href="/app/files/help-mail.odt"
+                       download="">Справка по ПК Обмен Данными</a></li>
+                <li><a ui-sref="pps.help" href="/app/files/help-kuf.odt"
+                       download="">Справка по ПК КУФ</a></li>
+                <li><a ui-sref="pps.help.gpd" href="/app/files/help-bgpd.odt"
+                       download="">Справка по Банку ГПД</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href=""
+               class="dropdown-hover nav-big-icon"
+               data-trigger="click"
+               data-placement="bottom-right"
+               bs-dropdown>
+        <span
+                data-title="Пользователь"
+                data-placement="left"
+                data-container="body"
+                bs-tooltip
+                class="glyphicon glyphicon-user"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <h4 ng-show="!user" class="media-heading ng-binding">Нет
+                        пользователя</h4>
+                    <h4 ng-bind="::user.name"
+                        class="media-heading ng-binding"></h4>
+                    <p ng-bind="::user.division" class="ng-binding"></p>
+                    <p ng-bind="::user.appointment" class="ng-binding"></p></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

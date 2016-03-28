@@ -1,0 +1,180 @@
+<div scroll-viewer ng-class="{'col-sm-7': vm.resourceId}">
+    <div class="panel panel-inverse">
+        <div class="panel-heading">
+            <h4 class="panel-title">Ресурсы</h4>
+        </div>
+        <div class="panel-body" ng-show="vm.showFilters">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Поисковая
+                        строка</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control"
+                               ng-model="vm.query.pattern" name="pattern">
+                    </div>
+                </div>
+                <!--<div class="form-group">-->
+                <!--<label class="col-sm-4 control-label">attrId</label>-->
+                <!--<div class="col-sm-8">-->
+                <!--<input type="text" class="form-control" ng-model="vm.query.attrId" name="attrId">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Критерий
+                        поиска</label>
+                    <div class="col-sm-8">
+                        <button type="button" class="btn btn-default"
+                                ng-model="vm.query.mode"
+                                placeholder="Выберите критерий поиска"
+                                bs-options="mode.id as mode.name for mode in vm.searchModes"
+                                bs-select>
+                            Action <span class="caret"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-8">
+                        <button class="btn btn-default"
+                                ng-click="vm.clearQuery()">Очистить
+                        </button>
+                        <button type="submit" class="btn btn-default"
+                                ng-click="vm.getResources()">Искать
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-heading">
+            <div class="pull-right">
+                <button type="button" class="btn btn-sm btn-default"
+                        ui-sref="pps.newresource"
+                        aria-label="Создать">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+
+            <button type="button" class="btn btn-sm btn-default"
+                    ng-click="vm.getResources()"
+                    aria-label="Обновить">
+                <span class="glyphicon glyphicon-repeat"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default"
+                    ng-click="vm.showFiltersPane()"
+                    aria-label="Фильтр">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+        <div class="panel-heading">
+            <alert-danger has-error="vm.hasError"
+                          error-message="vm.errorMessage"></alert-danger>
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="table-filter">
+                        Фильтр по слову: <input type="search"
+                                                ng-model="vm.query.word"
+                                                ng-change="vm.updatefilteredResources()">
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5">
+                    <div class="table-filter">
+                        Поиск по букве:
+                        <strong ng-repeat="letter in vm.alphabet">
+                            <a href="resources?startsWith={{letter}}">{{
+                                letter|uppercase }}</a>&#160;
+                        </strong>
+                        <strong ng-if="vm.alphabet.length == 1">
+                            <a ui-sref="{startsWith: null}">Все буквы</a>&#160;
+                        </strong>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-sm btn-success"
+                                ui-sref=".add"><i
+                                class="glyphicon glyphicon-plus"></i> Добавить
+                            ресурс
+                        </button>
+                        &nbsp;
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-info"
+                                    ng-class="{ 'active': vm.listViewTable }"
+                                    ng-click="vm.toggleListView()"><i
+                                    class="glyphicon glyphicon-align-justify fa-fw"></i>
+                                Таблица
+                            </button>
+                            <button class="btn btn-sm btn-info"
+                                    ng-class="{ 'active': !vm.listViewTable }"
+                                    ng-click="vm.toggleListView()"><i
+                                    class="glyphicon glyphicon-th-large"></i>
+                                Общая схема
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive" ng-if="vm.listViewTable" scroll-view>
+                <table at-table at-paginated at-list="vm.filteredResources"
+                       at-config="vm.config"
+                       class="table table-hover animated fadeIn">
+                    <thead></thead>
+                    <tbody>
+                    <tr>
+                        <td class="col-lg-1"
+                            at-title="#">{{ vm.calculateIndex($index+1) }}
+                        </td>
+                        <td class="col-lg-4"
+                            at-title="Наименование"
+                            at-sortable
+                            at-initial-sorting="asc"
+                            at-attribute="name">
+                            <a ui-sref=".view({id: item.id})"
+                               ng-bind="::item.name"></a>
+                        </td>
+                        <td at-title="Короткое наименование" at-implicit
+                            at-attribute="shortName">{{item.shortName}}
+                        </td>
+                        <td at-title="Метка" at-attribute="label" at-sortable>
+                            {{item.label}}
+                        </td>
+                        <td at-title="Родитель"><a
+                                ui-sref=".view({id: item.parent.id, reload:true})">{{item.parent
+                            ? item.parent.name : ''}}</a></td>
+                        <td at-title="Тип">{{item.type}}</td>
+                        <td at-title="Действия">
+                            <a ui-sref=".edit({id: item.id})"
+                               tooltip-placement="top" tooltip="edit"> <span
+                                    class="glyphicon glyphicon-edit"></span>
+                            </a>
+                            <a mm-modal-really-click="vm.deleteResource(item.id)"
+                               mm-really-header="Удалить ресурс"
+                               mm-really-message="Вы уверены, что хотите удалить ресурс?"
+                               tooltip-placement="top" tooltip="delete">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                            <a title="Показать структуру"
+                               ui-sref=".schema({id: item.id})">
+                                <span class="icon icon-hierarchy"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <at-pagination at-list="vm.filteredResources"
+                               at-config="vm.config"></at-pagination>
+            </div>
+            <div ng-if="!vm.listViewTable">
+                <div class="row animated fadeIn mt20">
+
+                    <d3-diagram graph="vm.graphNodes" width="1000" height="600"
+                                grid-size="1"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ui-view="resourceDetail" class="col-sm-5 resource-detail"></div>

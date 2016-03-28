@@ -1,0 +1,142 @@
+<div class="panel panel-default form-horizontal"
+     ng-show="!npd.docIsClosed && npd.currentDocument"
+     ng-model="npd.currentDocument">
+    <div class="panel-heading clearfix">
+        <!--<div class="pull-left">-->
+        <!--<div class="btn-group" ng-if="npd.currentDocument.id">-->
+        <!--<a class="btn btn-default" ng-click="$parent.openDocumentOffset(document, -1)"><span class="glyphicon glyphicon-arrow-up" tooltip="Предыдущий документ" tooltip-placement="top" tooltip-append-to-body="true"></span></a>-->
+        <!--<a class="btn btn-default" ng-click="$parent.openDocumentOffset(document, +1)"><span class="glyphicon glyphicon-arrow-down" tooltip="Следующий документ" tooltip-placement="top" tooltip-append-to-body="true"></span></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="pull-right">
+            <div class="btn-group">
+                <a class="btn btn-default" ng-click="npd.hideFormular()"><span
+                        class="glyphicon glyphicon-remove"></span> Закрыть</a>
+            </div>
+        </div>
+    </div>
+
+    <tabset justified="true">
+        <tab heading="Общая информация">
+            <div class="well-sm successme">
+                <!--<div class="form-group">-->
+                <!--<label class="col-md-4 text-right">Редакция</label>-->
+                <!--<div class="col-md-8">-->
+                <!--<select name="edition" class="form-control" ng-model="npd.currentDocument.npdVersionId"-->
+                <!--ng-options="version.id as version.title for version in document._versions"-->
+                <!--ng-change="document.get()">-->
+                <!--</select>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Вид</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.docType.title"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">№ документа</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.docNumber"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Наименование</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.name"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Разработчик</label>
+                    <div class="col-md-8">
+                        <span ng-repeat="developer in npd.currentDocument.developer">{{developer.title}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Принявший орган</label>
+                    <div class="col-md-8">
+                        <span ng-repeat="authority in npd.currentDocument.authorities">{{authority.title}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Дата принятия</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.acceptDate | date:'mediumDate'"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Дата вступления в
+                        силу</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.startDate | date:'mediumDate'"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Дата отмены
+                        действия</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.endDate | date:'mediumDate'"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Гриф документа</label>
+                    <div class="col-md-8">
+                        <span ng-bind="npd.currentDocument.securityClass.title"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 text-right">Документы</label>
+                    <ul class="col-md-8">
+                        <li ng-repeat="file in npd.currentDocument.files">
+                            {{file.title}}
+                        </li>
+                    </ul>
+                </div>
+                <!--<documents-view document="document"></documents-view>-->
+
+                <!--<regulating-docs-view document="document"></regulating-docs-view>-->
+
+            </div>
+        </tab>
+
+        <!--<tab heading="История изменений" select="document.getChangelog()">-->
+        <!--<div class="well-sm successme">-->
+        <!--<table class="table table-bordered table-striped">-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<td>Дата</td>-->
+        <!--<td>Событие</td>-->
+        <!--<td>Имя пользователя</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ng-repeat="item in document._changelog">-->
+        <!--<td><span ng-bind="::item.dateTime | date:'medium'" class="text-nowrap"></span></td>-->
+        <!--<td><span ng-bind="::item.event"></span></td>-->
+        <!--<td><span ng-bind="::item.user"  trigger="hover" placement="left" html="true" delay="300" data-title="Должность: {{::item.appointment}}<br/>Подразделение: {{::item.division}} " bs-tooltip></span></td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+        <!--</div>-->
+        <!--</tab>-->
+
+        <!--<tab heading="Связанные ИР" select="document.getRelatedResources()">-->
+        <!--<div class="well-sm successme">-->
+        <!--<table class="table table-bordered table-striped">-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<td>Тип ИР</td>-->
+        <!--<td>Наименование</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ng-repeat="item in document._irs">-->
+        <!--<td><span ng-bind="::item.type"></span></td>-->
+        <!--<td><span ng-bind="::item.name"></span></td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+        <!--</div>-->
+        <!--</tab>-->
+    </tabset>
+</div>

@@ -1,0 +1,642 @@
+{
+  "data": [
+    {
+      "id": "404579ce-e6a0-49d0-a9e5-2a1d0c6fc64c",
+      "label": "shortName",
+      "name": "Сокращенное наименование",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "9621dd02-cfef-4950-9f3a-6d04b847941f",
+      "label": "code",
+      "name": "Код",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "e39678fb-e793-4726-afc8-9e5f5d89aac2",
+      "label": "globalIdentifier",
+      "name": "Уникальный идентификатор",
+      "type": {
+        "id": "5e7c250b-84f3-42eb-a7cd-1ef6a7ef5668",
+        "name": "guid"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "80a283b1-6e04-40c3-a85f-f9adc52c7333",
+      "label": "label",
+      "name": "Системная метка",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "7e8c9d68-6db7-43e6-97c5-2f0e4c5a41f1",
+      "label": "description",
+      "name": "Описание",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "163f177b-0e07-4f25-8d93-e8b0144eba8b",
+      "label": "longName",
+      "name": "Длинное наименование",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "61eb3f98-b33f-42e6-aa0b-4251a955c2a9",
+      "label": "parentClassifier",
+      "name": "Родительская запись классификатора",
+      "type": {
+        "id": "b44f5239-8c9d-4bc8-a373-2b0590a1fbbd",
+        "name": "Не определено"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "1da986e0-f8f9-431c-a486-76a73044cb66",
+      "label": "childClassifier",
+      "name": "Дочерняя запись классификатора",
+      "type": {
+        "id": "b44f5239-8c9d-4bc8-a373-2b0590a1fbbd",
+        "name": "Не определено"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "488ba5bd-b867-4cc8-ae88-c6b20d79018c",
+      "label": "documentType",
+      "name": "Вид документа, удостоверяющего личность",
+      "type": {
+        "id": "3377d554-a3bd-4bba-be7a-b7083dd2f9a7",
+        "name": "Виды удостоверяющих личность документов"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "c491d099-7623-4011-a45f-cd5273d7d71d",
+      "label": "serialNumber",
+      "name": "Серия",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "26217a8b-63a1-45d6-afd0-f7b653e4dbec",
+      "label": "number",
+      "name": "Номер",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "eb53c727-1d6d-4329-aa0b-5bfb45986b75",
+      "label": "issuedBy",
+      "name": "Кем выдан",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "54c68d36-63a1-4698-876e-6ff20526c5ed",
+      "label": "dateOfIssue",
+      "name": "Дата выдачи",
+      "type": {
+        "id": "e3c0bbb8-fb46-4570-a6bb-9aed55ecacf0",
+        "name": "date"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "1bda2cff-521b-4189-9974-00a9f48dc9f2",
+      "label": "expirationDate",
+      "name": "Срок действия",
+      "type": {
+        "id": "e3c0bbb8-fb46-4570-a6bb-9aed55ecacf0",
+        "name": "date"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "0f62ccaa-790c-4a81-accc-5d1fc1461c79",
+      "label": "divisionCode",
+      "name": "Код подразделения",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "d879dba1-3441-4833-a2a1-1bf46630d460",
+      "label": "surname",
+      "name": "Фамилия",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "62b31d71-4775-4f8c-9702-4318a9c8298f",
+      "label": "name",
+      "name": "Имя",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "8212ccb0-5462-4156-a8a2-b0e9599ff7ab",
+      "label": "middleName",
+      "name": "Отчество",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "34a9fc2e-d249-43a2-9499-2c18ed97baf0",
+      "label": "dateOfBirth",
+      "name": "Дата рождения",
+      "type": {
+        "id": "e3c0bbb8-fb46-4570-a6bb-9aed55ecacf0",
+        "name": "date"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "908007d2-05a0-4ce2-8e0a-99c00004cac1",
+      "label": "gender",
+      "name": "Пол",
+      "type": {
+        "id": "8f2f783f-dc6e-4055-ae6e-a84e1a3b341b",
+        "name": "Пол"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "99f0a2dc-9ade-45bb-aac6-1ebf639f4696",
+      "label": "citizenship",
+      "name": "Гражданство",
+      "type": {
+        "id": "2080ed1e-afad-491a-a8e8-879525c51160",
+        "name": "Гражданство"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "126bdfa9-95db-4415-bf5c-ecae86b8cef0",
+      "label": "identityDocument",
+      "name": "Документ, удостоверяющий личность",
+      "type": {
+        "id": "354e91a9-976b-4bee-b873-1dbc53280ac1",
+        "name": "Документ, удостоверяющий личность"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "552c52e1-ec26-4997-9bab-072440ac4f55",
+      "label": "violatorType",
+      "name": "Вид нарушителя",
+      "type": {
+        "id": "3efd6007-ed54-47c9-9b50-963ed44377ab",
+        "name": "Вид нарушителя"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "fe287fb5-b7b2-414d-beef-c7ee2dae6380",
+      "label": "person",
+      "name": "Физическое лицо",
+      "type": {
+        "id": "18177e57-bcc9-4a9b-b389-cf794ac3c727",
+        "name": "Физическое лицо"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "b7297b09-e14c-49e9-96b7-a4a165d33f2e",
+      "label": "violations",
+      "name": "Нарушения",
+      "type": {
+        "id": "8dbf1d7b-43bc-47bf-9ca6-55e67dcf6dbc",
+        "name": "События в пограничном пространстве"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "e6b9cea8-3b4b-44ed-96f1-6704945f01dc",
+      "label": "detainedBy",
+      "name": "Кем задержан",
+      "type": {
+        "id": "16afc03b-deac-4d4b-8d68-43b7dd279900",
+        "name": "Кем задержан"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "8210144e-ca54-46ee-b108-dea338074797",
+      "label": "detainedByStr",
+      "name": "Кем задержан",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "c160deb4-334c-4372-aa83-55e2a7cecc63",
+      "label": "placeOfDetention",
+      "name": "Место задержания",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "fb43c385-715f-4f8f-87f4-730ac15cc241",
+      "label": "detentionDate",
+      "name": "Дата и время задержания",
+      "type": {
+        "id": "1e902bd2-c3ac-4198-9451-df67f3ffd8dd",
+        "name": "dateTime"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "595a9aae-4518-46a9-b346-0b406fc7ae1a",
+      "label": "shipmentType",
+      "name": "Вид груза",
+      "type": {
+        "id": "be0ef829-5bb8-4f21-8fa6-d969c21115af",
+        "name": "Виды грузов"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "7fc200ee-16d1-4517-89fb-f61298384f4f",
+      "label": "shipmentActions",
+      "name": "Действия в отношении задержанных грузов",
+      "type": {
+        "id": "21edea70-88a6-48a1-9ce6-65b8791589ef",
+        "name": "Действия в отношении задержанных грузов"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "b84f6f37-c208-4244-a995-89054ba67ae0",
+      "label": "shipmentQuantity",
+      "name": "Количество груза",
+      "type": {
+        "id": "abb3b23c-56a8-4dd6-96e9-a392661ab792",
+        "name": "float"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "928a9c2f-0086-430e-9e8e-a1d8a59c79b1",
+      "label": "quantityMeasure",
+      "name": "Еденица измерения количества груза",
+      "type": {
+        "id": "0699f105-1cf5-479e-a9ee-8c42b2908521",
+        "name": "Единицы измерения"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "16941057-02a7-4027-be71-c696266d19b0",
+      "label": "shipmentCost",
+      "name": "Стоимость груза",
+      "type": {
+        "id": "abb3b23c-56a8-4dd6-96e9-a392661ab792",
+        "name": "float"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "92ee4057-74a7-46d3-b54e-a60325e31d80",
+      "label": "costMeasure",
+      "name": "Еденица измерения стоимости груза",
+      "type": {
+        "id": "0699f105-1cf5-479e-a9ee-8c42b2908521",
+        "name": "Единицы измерения"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "9ec9ef78-3fd6-4ab2-bf73-8cca652833b5",
+      "label": "shipmentDescription",
+      "name": "Описание груза",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "221b1589-bc8c-49ca-9365-81ded786c58d",
+      "label": "dateTime",
+      "name": "Дата и время",
+      "type": {
+        "id": "1e902bd2-c3ac-4198-9451-df67f3ffd8dd",
+        "name": "dateTime"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "ac37a2d4-a9dd-42d1-b589-c05339026ae2",
+      "label": "actions",
+      "name": "Описание",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "b5a22f3e-7474-4ab6-b27e-8f67df1aad02",
+      "label": "reporter",
+      "name": "Кто доложил",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "84f12d6c-bdb2-43f7-b0eb-a6b9a9cf6e53",
+      "label": "regionType",
+      "name": "Тип участка границы",
+      "type": {
+        "id": "1e987810-6ade-4b6b-b79f-b452d77ff289",
+        "name": "Тип участка границы"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "ae556bcb-e07a-44cd-9be5-9f9079076603",
+      "label": "content",
+      "name": "Содержание",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "bd2be36e-5946-4249-921e-d3b05bf14e84",
+      "label": "creationDateTime",
+      "name": "Дата и время создания",
+      "type": {
+        "id": "1e902bd2-c3ac-4198-9451-df67f3ffd8dd",
+        "name": "dateTime"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "d9c1b8ef-b4b5-4eb6-a9bb-d143e7cf0821",
+      "label": "coordinate",
+      "name": "Координаты",
+      "type": {
+        "id": "06a91963-490b-43d4-8899-580cd8797677",
+        "name": "point"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "a8371c9d-d29e-4b9f-a86e-23e7018bc1f7",
+      "label": "placeOfViolation",
+      "name": "Место правонарушения",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "f4b2b853-1330-48fd-adb2-179f5ada922d",
+      "label": "decision",
+      "name": "Принятое решение",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "074ddd2d-872c-424f-a6e1-2e71126e5dbb",
+      "label": "decisionMaker",
+      "name": "Принявший решение",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "652c4480-c30c-462b-8886-7cfb915eb431",
+      "label": "dateOfDecision",
+      "name": "Дата принятия решения",
+      "type": {
+        "id": "e3c0bbb8-fb46-4570-a6bb-9aed55ecacf0",
+        "name": "date"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "47b93d49-e528-445d-9b1a-f9b4327da113",
+      "label": "eventActions",
+      "name": "Действия по событию",
+      "type": {
+        "id": "384b717e-acd6-4570-a8a8-d2291664955f",
+        "name": "Действия по событию"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "bcd291a6-bd24-4e5c-80df-bfd0a81655b4",
+      "label": "violators",
+      "name": "Нарушители",
+      "type": {
+        "id": "1b80db34-9947-44a6-8a7d-2ec385848873",
+        "name": "Нарушители"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "8285aa3c-ea72-424c-96b4-4d638f9441f4",
+      "label": "shipments",
+      "name": "Задержанные грузы",
+      "type": {
+        "id": "f04190e4-9f58-41fa-a36a-7972f9acebad",
+        "name": "Задержанные грузы"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "ab463c7c-c104-47a3-ae78-0f127dd3a375",
+      "label": "dangers",
+      "name": "Угрозы",
+      "type": {
+        "id": "36b7b2f7-4cb0-455d-8f44-98aedfbd4135",
+        "name": "Вид безопасности"
+      },
+      "keyType": null,
+      "structureType": "COLLECTION"
+    },
+    {
+      "id": "f67eb910-c4eb-44e0-b571-1555a017d3b0",
+      "label": "closingDate",
+      "name": "Дата и время закрытия",
+      "type": {
+        "id": "1e902bd2-c3ac-4198-9451-df67f3ffd8dd",
+        "name": "dateTime"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "3f0ff6d3-f580-40b2-8eb1-9bc362aa5d38",
+      "label": "closedBy",
+      "name": "Должностное лицо, принявшее решение по закрытию события",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "d9cd90ac-85f5-42f1-9970-6a7fe88617af",
+      "label": "closingReason",
+      "name": "Основание закрытия события",
+      "type": {
+        "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+        "name": "text"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "e7ec7379-711c-4296-9b7a-653d53ea98f3",
+      "label": "isClosed",
+      "name": "Закрыто",
+      "type": {
+        "id": "63721fd6-991b-415e-b165-7061d9e63e0b",
+        "name": "boolean"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "1be79e5e-dec3-4ecd-8b10-bfbecf1086b0",
+      "label": "indexNumber",
+      "name": "Порядковый номер",
+      "type": {
+        "id": "dd8ad359-e1b1-48fd-ac50-bcc9e85f2488",
+        "name": "integer"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "ee6ccb51-1e01-4b3f-aa85-8b08d52d160a",
+      "label": "fileExtention",
+      "name": "Расширение файла",
+      "type": {
+        "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+        "name": "string"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    },
+    {
+      "id": "4916b191-6158-4826-9929-8e7316c8b399",
+      "label": "MIMEtype",
+      "name": "Тип MIME",
+      "type": {
+        "id": "1a6e8c26-5351-4c38-bb7a-00af1c289220",
+        "name": "Список типов MIME"
+      },
+      "keyType": null,
+      "structureType": "VALUE"
+    }
+  ]
+}

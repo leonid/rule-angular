@@ -1,0 +1,73 @@
+<div scroll-viewer ng-class="{'col-sm-7': vm.resourceId}">
+    <div class="panel panel-inverse">
+        <div class="panel-heading">
+            <h3 class="panel-title">Атрибуты</h3>
+            <div class="row">
+                <div class="pull-right">
+                    <button type="button" class="btn btn-sm btn-success"
+                            ui-sref=".add">
+                        <i class="glyphicon glyphicon-plus"></i> Добавить
+                        атрибут
+                    </button>
+                </div>
+            </div>
+        </div>
+        <alert-danger has-error="vm.hasError"
+                      error-message="vm.errorMessage"></alert-danger>
+        <div class="panel-body">
+            <div class="table-responsive" scroll-view>
+                <table at-table at-paginated at-list="vm.attributes.data"
+                       at-config="vm.config"
+                       class="table table-hover animated fadeIn">
+                    <thead></thead>
+                    <tbody>
+
+                    <tr>
+                        <td class="col-lg-1"
+                            at-title="#">{{ vm.calculateIndex($index+1) }}
+                        </td>
+                        <td class="col-lg-4"
+                            at-title="Наименование"
+                            at-sortable
+                            at-initial-sorting="asc"
+                            at-attribute="name">
+                            <a ui-sref=".view({id: item.id})"
+                               ng-bind="::item.name"></a>
+                        </td>
+                        <td at-title="keyType" at-implicit
+                            at-attribute="keyType">{{item.keyType}}
+                        </td>
+                        <td at-title="Метка" at-attribute="label" at-sortable>
+                            {{item.label}}
+                        </td>
+                        <td at-title="structureType">{{item.structureType}}</td>
+                        <td at-title="Тип">{{item.type}}</td>
+                        <td at-title="Действия">
+                            <a ui-sref=".edit({id: item.id})"
+                               tooltip-placement="top" tooltip="edit"> <span
+                                    class="glyphicon glyphicon-edit"></span>
+                            </a>
+                            <a mm-modal-really-click="vm.deleteResource(item.id)"
+                               mm-really-header="Удалить ресурс"
+                               mm-really-message="Вы уверены, что хотите удалить ресурс?"
+                               tooltip-placement="top"
+                               tooltip="delete">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                            <a title="Показать структуру"
+                               ui-sref=".schema({id: item.id})">
+                                <span class="icon icon-hierarchy"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <at-pagination at-list="vm.attributes.data"
+                               at-config="vm.config"></at-pagination>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ui-view="resourceDetail" class="col-sm-5 resource-detail"></div>

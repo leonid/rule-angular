@@ -1,0 +1,2065 @@
+{
+  "data": [
+    {
+      "id": "071b56e5-427d-4e63-903b-6cad18feee16",
+      "label": "time",
+      "shortName": "time",
+      "name": "time",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "abb3b23c-56a8-4dd6-96e9-a392661ab792",
+      "label": "float",
+      "shortName": "float",
+      "name": "float",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "354e91a9-976b-4bee-b873-1dbc53280ac1",
+      "label": "identityDocument",
+      "shortName": "Документ, удостоверяющий личность",
+      "name": "Документ, удостоверяющий личность",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "18177e57-bcc9-4a9b-b389-cf794ac3c727",
+      "label": "person",
+      "shortName": "Физическое лицо",
+      "name": "Физическое лицо",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "1b80db34-9947-44a6-8a7d-2ec385848873",
+      "label": "violators",
+      "shortName": "Нарушители",
+      "name": "Нарушители",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "f051b1ee-34c9-4979-aebf-4df818d531f8",
+      "label": "double",
+      "shortName": "double",
+      "name": "double",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "f04190e4-9f58-41fa-a36a-7972f9acebad",
+      "label": "shipment",
+      "shortName": "Задержанные грузы",
+      "name": "Задержанные грузы",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "384b717e-acd6-4570-a8a8-d2291664955f",
+      "label": "eventAction",
+      "shortName": "Действия по событию",
+      "name": "Действия по событию",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "8d0acff2-eafd-4386-9911-7f10d3ea6a68",
+      "label": "char",
+      "shortName": "char",
+      "name": "char",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "3aca4bf0-b0e4-46f3-9370-263d88559a19",
+      "label": "event",
+      "shortName": "Событие в пограничном пространстве",
+      "name": "Событие в пограничном пространстве",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "cfb1230e-00eb-467b-842c-d14e6f2ddec0",
+      "label": "offender_count",
+      "shortName": "Количество нарушителей",
+      "name": "Количество нарушителей (ФЛ)",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "5a187eb2-84e4-4771-aacf-25498f3f4c1d",
+      "label": "DOG_BREED",
+      "shortName": "Породы служебных собак",
+      "name": "Породы служебных собак",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "f5e561cb-ef91-4e41-a334-ca3949b05704",
+      "label": "CURRENCY",
+      "shortName": "Справочник валют",
+      "name": "Справочник валют",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8920de01-964e-4176-9f04-050e1a64553c",
+      "label": "MALFUNCTION",
+      "shortName": "Неисправность",
+      "name": "Неисправность",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "798887b8-2568-4773-883a-796839feec76",
+      "label": "ORGSTRUCT_TYPE",
+      "shortName": "Типы объектов оргструктуры",
+      "name": "Типы объектов оргструктуры",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "dd8ad359-e1b1-48fd-ac50-bcc9e85f2488",
+      "label": "integer",
+      "shortName": "integer",
+      "name": "integer",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "9b6f5eff-0792-438b-9f1c-02da2f14a3e6",
+      "label": "PERIODICITY",
+      "shortName": "Периодичность",
+      "name": "Периодичность",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "9cacb25d-a77d-4b64-aa0d-fc64a40cfb63",
+      "label": "DECISION_TAKEN",
+      "shortName": "Принятое решение ",
+      "name": "Принятое решение ",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e0860f26-0d39-40a4-8bc2-ada625d7fb32",
+      "label": "WHENCE_CAME",
+      "shortName": "Откуда прибыло животное",
+      "name": "Откуда прибыло животное",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "0cdf766d-2c69-4c4b-b9ee-8612a821eda3",
+      "label": "TRANSIT_CATEGORY",
+      "shortName": "Транзит категория",
+      "name": "Транзит категория",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "0699f105-1cf5-479e-a9ee-8c42b2908521",
+      "label": "UNITS_MEASURE",
+      "shortName": "Единицы измерения",
+      "name": "Единицы измерения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "76ef9f6e-a16b-4861-9168-c6266f32e754",
+      "label": "REPAIR",
+      "shortName": "Виды ремонта",
+      "name": "Виды ремонта",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4b7fb279-ce9e-4c0e-90a4-940d029dd195",
+      "label": "STATUS_OFFENDER",
+      "shortName": "Статус нарушителя",
+      "name": "Статус нарушителя",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4af654a7-7e4d-40fc-b781-fcdb2c085f6f",
+      "label": "TEAMS_ALARMS",
+      "shortName": "Команды тревог",
+      "name": "Команды тревог",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "1bed243f-486c-43cc-a536-f19424af2203",
+      "label": "BORDER_CROSSING",
+      "shortName": "Направления движения нарушителей",
+      "name": "Направления движения нарушителей",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c4862647-1822-4a9a-8a43-a412f0010d50",
+      "label": "WHERE_RETIRED",
+      "shortName": "Куда выбыло животное",
+      "name": "Куда выбыло животное",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3c601e0e-ddfd-4e2c-be9b-7c704b41f6a3",
+      "label": "ALERT_SEA",
+      "shortName": "События мониторинга обстановки на морских участках",
+      "name": "События мониторинга обстановки (тревоги) на морских участках государственной границы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2080ed1e-afad-491a-a8e8-879525c51160",
+      "label": "CITIZENSHIP",
+      "shortName": "Гражданство",
+      "name": "Гражданство",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "7405916c-e2f5-4700-b5b6-b8cee152bb25",
+      "label": "TYPES_PLANS",
+      "shortName": "Типы планов",
+      "name": "Типы планов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "63460016-9d54-4388-81d2-3f86ff6460af",
+      "label": "SECURITY_CLASS",
+      "shortName": "Гриф секретности",
+      "name": "Гриф секретности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "db40bed6-aa84-4438-9eb7-cd2bb5b5903a",
+      "label": "TYPE_TMBC",
+      "shortName": "Виды ТСПК",
+      "name": "Виды  технических средств пограничного контроля",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "82017c7d-7ab4-40a0-8b9b-d83568fb44c0",
+      "label": "MOVE_MODEL",
+      "shortName": "Модели движения",
+      "name": "Модели движения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "f95cd0f3-d919-44e9-8306-861b7b87cdef",
+      "label": "STRENGTHENING",
+      "shortName": "Средства усиления",
+      "name": "Средства усиления",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d7800d97-ed05-4b44-8336-f6a5559a9c34",
+      "label": "TYPES_SEPARATION",
+      "shortName": "Виды отрыва л/с",
+      "name": "Виды отрыва л/с",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2b9821fe-81be-4244-9cff-d34e513fb498",
+      "label": "WIND_DIRECTION",
+      "shortName": "Направление ветра",
+      "name": "Направление ветра",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a03301c0-42e1-42ee-a1b1-01192adb4c47",
+      "label": "PRECIPITATION",
+      "shortName": "Тип осадков",
+      "name": "Тип осадков",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "942f5224-3f8d-4e69-95a4-c790a84fa384",
+      "label": "PLAN_SECTIONS",
+      "shortName": "Типовые разделы плана",
+      "name": "Типовые разделы плана",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "36b7b2f7-4cb0-455d-8f44-98aedfbd4135",
+      "label": "THREAT_KIND",
+      "shortName": "Вид безопасности",
+      "name": "Вид безопасности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "50ba1df8-a37b-4469-af30-c08d991c8ece",
+      "label": "FRONTIER_LAND_ACTIVITY",
+      "shortName": "Формы служебно-боевой деятельности",
+      "name": "Формы служебно-боевой деятельности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2f3ca9b3-f25b-439b-8616-563a4c88bca5",
+      "label": "SIZE_TRG_EOP",
+      "shortName": "Размеры надводной цели по ЭОП",
+      "name": "Размеры надводной цели по ЭОП",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a2cae7a1-6e57-4f3e-accb-ec12c36ae8aa",
+      "label": "MILITARY_RANKS",
+      "shortName": "Воинские звания",
+      "name": "Воинские звания",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a1edabb1-f39c-4071-95a4-1b565790a7f1",
+      "label": "FOREIGN_SYSTEMS",
+      "shortName": "Информационные системы",
+      "name": "Информационные системы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "ee764978-0513-4bd6-8321-e96517961539",
+      "label": "FRONTIER_STATUS",
+      "shortName": "Статус",
+      "name": "Статус",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "1a5b72c2-af68-473f-9857-d61104550464",
+      "label": "ECFL",
+      "shortName": "Элементы БП по сигналам тревог",
+      "name": "Элементы БП по сигналам тревог",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "de535608-53fa-43b4-b027-19befc47083f",
+      "label": "TYPE_VEHICLE",
+      "shortName": "Тип ТС",
+      "name": "Тип ТС",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "28607ca6-db4d-430d-9748-99fb5fc7ee6d",
+      "label": "CATEGORIES",
+      "shortName": "Категории",
+      "name": "Категории",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "75cab137-e120-4af3-84a1-86bbb3e27c2d",
+      "label": "TYPE_ANIMAL",
+      "shortName": "Тип/категория служебного животного",
+      "name": "Тип/категория служебного животного",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8e394526-3662-4661-a3fb-70d9fb78a88c",
+      "label": "TYPES_TRACKS_TARGETS",
+      "shortName": "Виды трасс надводных целей",
+      "name": "Виды трасс надводных целей",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8db95f4c-6464-49fa-a059-82a423fe82f7",
+      "label": "MARINE_TARGETS_TYPES_BY_SPEED",
+      "shortName": "Типы мор. целей по скор.",
+      "name": "Типы морских целей по скорости",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e5c22de3-c153-4692-a17a-84c2b50a2e4b",
+      "label": "VISA_INOUT",
+      "shortName": "Типы документов для виз",
+      "name": "Типы документов для виз",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e90b5f99-2799-4056-ba65-f8b1b6b4639d",
+      "label": "WHENCE_RECEIVED",
+      "shortName": "Откуда поступило поручение",
+      "name": "Откуда поступило поручение",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "98652617-ae86-41b6-953b-d40fce1b45be",
+      "label": "RESULTS_SERVICE",
+      "shortName": "Результаты службы",
+      "name": "Результаты службы служебных животных",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2f7cc7ef-aa03-402c-8c44-fe7f00a4352b",
+      "label": "TYPES_BORDER_OPERATIONS",
+      "shortName": "Виды пограничных операций",
+      "name": "Виды пограничных операций",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "238ab90d-9842-4eff-bb41-95fbdf3d8253",
+      "label": "DOCUMENT_CONTROL",
+      "shortName": "Виды документа контроля",
+      "name": "Виды документа контроля",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3377d554-a3bd-4bba-be7a-b7083dd2f9a7",
+      "label": "IDENTITY_KIND",
+      "shortName": "Виды удостоверяющих личность документов",
+      "name": "Виды удостоверяющих личность документов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "0fc0c943-8d0b-4ce4-9c89-a1b774be873c",
+      "label": "CATEGORY_TSOG",
+      "shortName": "Категория ТСОГ",
+      "name": "Категория ТСОГ",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4c1741f7-9116-453f-ab5b-3b85f19e54a3",
+      "label": "REASON_NOT_USING",
+      "shortName": "Причина не использования",
+      "name": "Причина не использования",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2ff1ebc0-1a5f-41ae-8b67-10c5296a70a4",
+      "label": "TRAVEL_REASON",
+      "shortName": "Цели поездки",
+      "name": "Цели поездки",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "efd9075d-b36e-4c34-9c6e-953ac4b85fad",
+      "label": "TYPE_BLANK",
+      "shortName": "Тип бланка",
+      "name": "Тип бланка",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d926fdf0-4f64-4b60-9d84-2f4465d206c8",
+      "label": "TYPES_SYMBOLS",
+      "shortName": "Виды условных знаков",
+      "name": "Виды условных знаков",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "af4e93f0-5ffb-11e4-9803-0800200c9a66",
+      "label": "LOCATION_VIOLATOR",
+      "shortName": "Местоположение нарушителя",
+      "name": "Местоположение нарушителя",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a5cf19ed-829a-49b0-8596-e28f8db52368",
+      "label": "STATE_TYPES_FORCES",
+      "shortName": "Виды сил и средств сопредельных государств",
+      "name": "Виды сил и средств сопредельных государств",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "91ed6162-a4c9-40a9-9f6d-6e2a31917d3b",
+      "label": "TYPES_WBR",
+      "shortName": "Виды ВБР",
+      "name": "Виды ВБР",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e3bfe649-fad4-4945-8a2a-8522eb7c56fa",
+      "label": "DEEP_SCALE",
+      "shortName": "Единицы измерения глубины выборки",
+      "name": "Единицы измерения глубины выборки",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3c3c49aa-a5d7-4d60-930f-be4daaac4c6a",
+      "label": "DATE_TYPE",
+      "shortName": "Вид даты",
+      "name": "Вид даты",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "5e7c250b-84f3-42eb-a7cd-1ef6a7ef5668",
+      "label": "guid",
+      "shortName": "guid",
+      "name": "guid",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "271021b8-d2de-4a81-8621-3ab1584eb502",
+      "label": "TYPE_PASSENGER",
+      "shortName": "Тип пассажира",
+      "name": "Тип пассажира",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d3da3916-6d1b-473d-87d2-8925f547b7cc",
+      "label": "HORSE_BREED",
+      "shortName": "Породы служебных лошадей",
+      "name": "Породы служебных лошадей",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4dd1427e-e9ce-4120-88aa-e6e72863e650",
+      "label": "OKOGU",
+      "shortName": "ОКОГУ",
+      "name": "Общероссийский классификатор органов государственной власти и управления",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c3823937-c1a0-426f-ba90-0b534b7f7d06",
+      "label": "OPERABILITY",
+      "shortName": "Состояние работоспособности",
+      "name": "Состояние работоспособности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d0559f70-6fba-11e4-9803-0800200c9a66",
+      "label": "NPD_STATUS",
+      "shortName": "Статус НПД",
+      "name": "Статус нормативно-правовой документации",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e3c0bbb8-fb46-4570-a6bb-9aed55ecacf0",
+      "label": "date",
+      "shortName": "date",
+      "name": "date",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "883fd792-4257-4047-8766-0fc3a28a5044",
+      "label": "CAUSE_DETECTION",
+      "shortName": "Причина сработки",
+      "name": "Причина сработки",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d800bc73-5f8a-423e-becc-2dbe2c5b461b",
+      "label": "DEGREE_FACTORS",
+      "shortName": "Степень влияния факторов",
+      "name": "Степень влияния факторов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4e50948a-e1f3-4f6b-8c45-bc808b964fd9",
+      "label": "ORGSTRUCT_KINDS_OBJECTS",
+      "shortName": "Виды объектов оргструктуры",
+      "name": "Виды объектов оргструктуры",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "b35d34cf-44f5-4ccb-ac95-7d41d1dac5ca",
+      "label": "TOOLS_FISHERY",
+      "shortName": "Орудия рыболовства",
+      "name": "Орудия рыболовства",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c47690a3-f895-4f15-9eed-f310b4ebbc94",
+      "label": "FACTORS",
+      "shortName": "Факторы, влияющие на угрозу",
+      "name": "Факторы, влияющие на угрозу",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "30a08e90-2d12-4a8f-9dd0-2daf04bc80de",
+      "label": "ALERT_LAND",
+      "shortName": "События мониторинга обстановки на сухопутных участках",
+      "name": "События мониторинга обстановки (тревоги) на сухопутных участках государственной границы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "6ddf50d7-3210-4c59-889e-9203b8018143",
+      "label": "ORGSTRUCT_GROUP",
+      "shortName": "Группы оргструктуры",
+      "name": "Группы оргструктуры",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "060e4fc3-e099-4304-bce3-5bb606b64236",
+      "label": "SHIP_TYPE",
+      "shortName": "Тип судна/груза",
+      "name": "Тип судна/груза",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "7ff694a8-bf36-4a30-9b4b-71a40192c73a",
+      "label": "string",
+      "shortName": "string",
+      "name": "string",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "be5b869a-8c36-4267-b97d-619f32a1d0ab",
+      "label": "TYPES_FISHING",
+      "shortName": "Виды рыболовства",
+      "name": "Виды рыболовства",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "1277aa2b-0ae8-44ce-b8eb-19c10da6b90f",
+      "label": "LOGISTICS_SUPPORT",
+      "shortName": "Группы МТС",
+      "name": "Группы материально-технического обеспечения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "35dec276-123d-11e4-87ff-9780c77ffc95",
+      "label": "SUBDIVISION",
+      "shortName": "Структурные подразделения органов управления пограничных органов",
+      "name": "Структурные подразделения органов управления пограничных органов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "eba82fc4-061f-47e9-a6ab-f3840c6bf02e",
+      "label": "COMPARISON_FINGERPRINT",
+      "shortName": "Результат сравнения отпечатков",
+      "name": "Результат сравнения отпечатков",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4a7e21c9-d3cc-4cf6-ba5d-4edcb650a242",
+      "label": "polygon",
+      "shortName": "polygon",
+      "name": "polygon",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "c4d39824-fdb9-42bc-a2ef-709b83756d28",
+      "label": "TECHNICAL_CONDITION",
+      "shortName": "Техническое состояние комплексов, средств",
+      "name": "Техническое состояние комплексов, средств",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "174c8d67-43da-41b0-a4f7-bdff42ac8cf4",
+      "label": "TYPES_EVENTS",
+      "shortName": "Виды событий",
+      "name": "Виды событий",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3efd6007-ed54-47c9-9b50-963ed44377ab",
+      "label": "OFFENDER_TYPE",
+      "shortName": "Вид нарушителя",
+      "name": "Вид нарушителя",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "fcf628be-5675-4cbe-8c73-42c6ede9f369",
+      "label": "TYPE_ACTIVITY",
+      "shortName": "Виды деятельности",
+      "name": "Виды деятельности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "19a5cf43-457d-4c39-a7e3-60680e2990a8",
+      "label": "FORM_TOLERANCE",
+      "shortName": "Форма допуска к государственной тайне",
+      "name": "Форма допуска к государственной тайне",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "f6466e31-0ea5-47d2-ac43-52a7dd5b31e4",
+      "label": "METHOD_EXECUTION",
+      "shortName": "Способ выполнения задач ПСКР",
+      "name": "Способ выполнения задач ПСКР",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "677cce35-e56a-4774-aff2-4bec64bb6c98",
+      "label": "ANIMAL_SEX",
+      "shortName": "Пол животного",
+      "name": "Пол животного",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "dbf8960b-8670-4ac6-9fe6-21e7e35d8eaa",
+      "label": "DOC_VIOLATION",
+      "shortName": "Вид документа о правонарушении",
+      "name": "Вид документа о правонарушении",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "405b6b8e-1f24-4d66-8c87-5312324eeaa2",
+      "label": "DECISION",
+      "shortName": "Решение о пропуске",
+      "name": "Решение о пропуске",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a80e45e0-dc09-4d32-9f9e-ea9e39ded267",
+      "label": "TSOG",
+      "shortName": "ТСОГ",
+      "name": "Технические средства охраны границы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "80c1c365-c8ba-4c7e-8729-1f18b5e64cac",
+      "label": "ESTABLISHED_POSTS",
+      "shortName": "Штатные должности",
+      "name": "Штатные должности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4cccac36-caa1-4e60-9eb4-f29d65205013",
+      "label": "SOURCES_MANUALLY",
+      "shortName": "Источники цели, созданной вручную",
+      "name": "Источники цели, созданной вручную",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8dbf1d7b-43bc-47bf-9ca6-55e67dcf6dbc",
+      "label": "EVENT_FRONTIER",
+      "shortName": "События в пограничном пространстве",
+      "name": "События в пограничном пространстве",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "7b0510e7-6e31-4891-aef6-63b518900a1a",
+      "label": "GROUND_TARGETS_TYPES_BY_SPEED",
+      "shortName": "Типы наз. целей по скор.",
+      "name": "Типы наземных целей по скорости",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "df9b54a2-0fef-43b2-a19e-41b434bd4552",
+      "label": "PLAN_ACTIVITIES",
+      "shortName": "Типовые мероприятия плана",
+      "name": "Типовые мероприятия плана",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "6909d610-6fba-11e4-9803-0800200c9a66",
+      "label": "NPD_TYPE",
+      "shortName": "Тип НПД",
+      "name": "Тип нормативно-правовой документации",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a23493b0-6a3b-4654-940f-d575014d389e",
+      "label": "OFFENSE_GOAL",
+      "shortName": "Цели нарушений",
+      "name": "Цели нарушений",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "bcffc3ff-172e-4773-96e0-fef98c642662",
+      "label": "STATUS_CONTROL",
+      "shortName": "Статус пограничного контроля",
+      "name": "Статус пограничного контроля",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "fa96c64a-cf15-41ee-aa84-8de2dcef36c5",
+      "label": "text",
+      "shortName": "text",
+      "name": "text",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "129808d8-82f2-4b79-b1e9-9a01f2f2a7ae",
+      "label": "EDUCATION",
+      "shortName": "Образование",
+      "name": "Образование",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "7f309d33-24a6-45c6-a971-4093afc6ee5b",
+      "label": "ARTICLES_CRIMINAL",
+      "shortName": "Статьи УК РФ ",
+      "name": "Статьи УК РФ ",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "1e902bd2-c3ac-4198-9451-df67f3ffd8dd",
+      "label": "dateTime",
+      "shortName": "dateTime",
+      "name": "dateTime",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "270e8ddc-5a2b-485d-b3b7-ed3264b388b5",
+      "label": "DIRECTION",
+      "shortName": "Направление движения",
+      "name": "Направление движения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "574d0025-5abd-4dd1-a0c5-2ad7d0a7b8af",
+      "label": "OFFENDER_AGAINST",
+      "shortName": "Меры воздействия в отношении нарушителя",
+      "name": "Меры воздействия в отношении нарушителя",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "50ee4f68-6f0c-4331-bff8-ee00240bd6de",
+      "label": "WEAPON_REASON",
+      "shortName": "Цель применения оружия и боевой техники",
+      "name": "Цель применения оружия и боевой техники",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2517d0c8-7dbc-4f1e-9e76-596dac0434c7",
+      "label": "long",
+      "shortName": "long",
+      "name": "long",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "0fd55002-04f5-414b-a821-99a094cfe648",
+      "label": "SOLUTION",
+      "shortName": "Решение",
+      "name": "Решение",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e651d72e-9bc8-4b24-8e41-9a569a90986c",
+      "label": "ASSESSMENT",
+      "shortName": "Оценка состояния",
+      "name": "Оценка состояния",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "cad6e386-0c41-43d8-85fd-218baa8d158c",
+      "label": "STATUS_NAVIGATIONAL",
+      "shortName": "Навигационные статусы",
+      "name": "Навигационные статусы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c2cc38c0-be56-450d-80a0-296ff92c8427",
+      "label": "FAMILY_STATUS",
+      "shortName": "Семейное положение",
+      "name": "Семейное положение",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "6ceb1cc5-866c-4b9d-842d-50e6e0a80d13",
+      "label": "AUTHORITIES",
+      "shortName": "Законодательные органы",
+      "name": "Законодательные органы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "be0ef829-5bb8-4f21-8fa6-d969c21115af",
+      "label": "TYPES_CARGO",
+      "shortName": "Виды грузов",
+      "name": "Виды грузов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3ccb8ab3-571e-4cbc-a7b8-22672de4d799",
+      "label": "TYPES_MAINTENANCE",
+      "shortName": "Виды ТО",
+      "name": "Виды ТО",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c28edc35-c08f-4a4c-bc53-c2c852fbdf27",
+      "label": "VISA_TYPE",
+      "shortName": "Класс виз",
+      "name": "Класс виз",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "300afb98-9f5c-4f56-a7b0-8694570ccbc7",
+      "label": "STATUS_PERSON",
+      "shortName": "Статус лица в документе",
+      "name": "Статус лица в документе",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "5bf83f4c-8fb0-46b7-b55f-6a8fadc497a2",
+      "label": "VIEW_DEVICE",
+      "shortName": "Вид устройства ",
+      "name": "Вид устройства ",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "19685790-2162-460a-8744-5628320db022",
+      "label": "LAND_KIND",
+      "shortName": "Вид участка",
+      "name": "Вид участка",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "abbdd86e-faa7-4799-a843-31110af04435",
+      "label": "line",
+      "shortName": "line",
+      "name": "line",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "6f9c06c1-f7bd-47ed-b6c5-e6dc2e1834d1",
+      "label": "VISA_MULTI",
+      "shortName": "Кратность виз",
+      "name": "Кратность виз",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "55a14a2f-86d5-475b-90cb-519e58bf5f14",
+      "label": "KPM_KIND",
+      "shortName": "Виды КПМ",
+      "name": "Виды контрольно-проверочных мероприятий",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2748770b-ba32-4811-a019-caa444c9f64b",
+      "label": "SYSTEM_LOGISTICS_SUPPORT",
+      "shortName": "Системы МТС",
+      "name": "Системы материально-технического обеспечения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "c7f62de7-7b5d-4e70-9eac-6abb3ca5c390",
+      "label": "ELEMENTS_ORDER_BATTLE",
+      "shortName": "Элементы боевого порядка",
+      "name": "Элементы боевого порядка",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "44f5a207-acd3-4fc2-bc47-b5f4b4fe3b39",
+      "label": "TYPE_DEVICE",
+      "shortName": "Тип устройства ",
+      "name": "Тип устройства ",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "4e669842-44fe-4fed-a322-5f07ceef4a96",
+      "label": "REASON_DISCONNECTION",
+      "shortName": "Причина отключения участка",
+      "name": "Причина отключения участка",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "32cb435e-7e53-4695-8a66-b403e89beb43",
+      "label": "FRONTIER_DITY_KIND",
+      "shortName": "Виды нарядов",
+      "name": "Виды пограничных нарядов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8032974c-5e79-4ca4-9703-fcc8e4b32bc2",
+      "label": "TYPE_DISPLAY",
+      "shortName": "Тип отображения",
+      "name": "Тип отображения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e8d554e7-a1c5-468a-b8c7-eb4c77623ace",
+      "label": "STAFFING",
+      "shortName": "Укомплектованность ЛС",
+      "name": "Показатели укомплектованности ЛС",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "879ebba8-3d9b-4afe-bddb-24b3f06c8ef3",
+      "label": "TOUR_ORIGIN_MODE",
+      "shortName": "Режим рейса",
+      "name": "Режим рейса",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d68aa600-4128-4cf0-a509-56c8e4da2cf0",
+      "label": "FORM_CONTROL",
+      "shortName": "Форма контроля",
+      "name": "Форма контроля",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "63721fd6-991b-415e-b165-7061d9e63e0b",
+      "label": "boolean",
+      "shortName": "boolean",
+      "name": "boolean",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "06a91963-490b-43d4-8899-580cd8797677",
+      "label": "point",
+      "shortName": "point",
+      "name": "point",
+      "parent": null,
+      "type": "BASE",
+      "classifier": false
+    },
+    {
+      "id": "1aa3fa32-4c7f-4632-b228-f5bcc90ee792",
+      "label": "STATUS_OFFENSES",
+      "shortName": "Статус правонарушения",
+      "name": "Статус правонарушения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "324c2c58-7b6b-4b18-be34-a4710b0538ca",
+      "label": "FISHING_POOLS",
+      "shortName": "Рыбопромысловые бассейны",
+      "name": "Рыбопромысловые бассейны",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "72eefd7e-19fc-4907-afba-f3c7bacc8c06",
+      "label": "DOC_TYPE",
+      "shortName": "Виды документов",
+      "name": "Виды документов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "1e987810-6ade-4b6b-b79f-b452d77ff289",
+      "label": "TYPE_SECTION_BORDER",
+      "shortName": "Тип участка границы",
+      "name": "Тип участка границы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "052c9d2c-2ea5-46df-ba5c-9be8fe5cd803",
+      "label": "TARGET_TYPE_SSK",
+      "shortName": "Тип цели ССК",
+      "name": "Тип цели ССК",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "0a6b5474-bf7c-4d4c-bee9-d3eee5fde541",
+      "label": "violator_count",
+      "shortName": "Количество нарушителей (ФЛ)",
+      "name": "Количество нарушителей (ФЛ)",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "1a6e8c26-5351-4c38-bb7a-00af1c289220",
+      "label": "listTypeMIME",
+      "shortName": "Список типов MIME",
+      "name": "Список типов MIME",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+      "label": "CLASSIFICATOR",
+      "shortName": "Классификатор",
+      "name": "Классификатор",
+      "parent": null,
+      "type": "RESOURCE",
+      "classifier": false
+    },
+    {
+      "id": "16afc03b-deac-4d4b-8d68-43b7dd279900",
+      "label": "ANYONE_ARRESTED",
+      "shortName": "Кем задержан",
+      "name": "Кем задержан",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "45f152c5-be76-45b6-b9d2-fd014a6f15c2",
+      "label": "KLASSNOST",
+      "shortName": "Классность",
+      "name": "Классность",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d0d3d766-360c-4f51-a0d1-78145f40c9b4",
+      "label": "STATE",
+      "shortName": "Страны мира",
+      "name": "Страны мира",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "16802765-3239-4fdb-bde7-2c549848e5ab",
+      "label": "TYPES_STORAGE",
+      "shortName": "Виды хранения",
+      "name": "Виды хранения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "fa05313f-e80e-4311-b272-e442f1fd4f91",
+      "label": "SANCTIONS",
+      "shortName": "Санкции",
+      "name": "Санкции",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3a55b466-3174-46f2-ad8b-84461a6222b8",
+      "label": "KIND_OPERATION",
+      "shortName": "Вид операции",
+      "name": "Вид операции",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "b5259223-3c39-40e2-9c57-1675b5d42613",
+      "label": "DOC_STATUS",
+      "shortName": "Статус документа",
+      "name": "Статус документа",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "205d1d5f-2101-435d-ac32-d626427bcc17",
+      "label": "CLOSED_VESSEL",
+      "shortName": "Признак закрытого судна",
+      "name": "Признак закрытого судна",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "b3d81d36-4171-4656-b136-006f350caca4",
+      "label": "TYPE_BIOMETRICS",
+      "shortName": "Тип биометрии",
+      "name": "Тип биометрии",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "3cf8d96d-0c3b-4f81-86e8-becaa29299dc",
+      "label": "ENGINEERING_STRUCTURES",
+      "shortName": "Виды инженерных сооружений",
+      "name": "Виды инженерных сооружений",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "44096b0d-9545-4626-ae71-46e2e02eb156",
+      "label": "COMMUNITY_FEATURES",
+      "shortName": "Свойства местности",
+      "name": "Свойства местности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "b44f5239-8c9d-4bc8-a373-2b0590a1fbbd",
+      "label": "UNDEFINED",
+      "shortName": "Не определено",
+      "name": "Не определено",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "6dfc854d-abea-4a72-a6eb-064113c2730b",
+      "label": "DIRECTION_CPP",
+      "shortName": "Направление пересечения",
+      "name": "Направление пересечения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "07a71338-e8c1-4eb7-bde7-b1c812eaca15",
+      "label": "KINDS_WEAPONS",
+      "shortName": "Виды вооружения",
+      "name": "Виды вооружения",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "d31b8122-78d9-4acd-95ad-4719575d91ad",
+      "label": "OBJECTS_VISUALIZATION",
+      "shortName": "Объекты визуализации",
+      "name": "Объекты визуализации",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "af4e93f5-5ffb-11e4-9803-0800200c9a66",
+      "label": "DIRECTION_TRAFFIC",
+      "shortName": "Направление движения нарушителя",
+      "name": "Направление движения нарушителя",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "febefd06-c057-4b30-a51b-35187f846c88",
+      "label": "CITIZENS",
+      "shortName": "Гражданство",
+      "name": "Гражданство",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "70e5431a-29cc-453d-9fd9-18a37cebe0a5",
+      "label": "METHODS_DATA",
+      "shortName": "Способы передачи данных",
+      "name": "Способы передачи данных",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a11c93c5-d3cc-4922-997c-6d09fb46e1de",
+      "label": "STATE_SENSORS",
+      "shortName": "Состояние датчиков",
+      "name": "Состояние датчиков",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "924c1085-530f-45a6-9d3c-d84b1839eba3",
+      "label": "TYPES_AIRCRAFT",
+      "shortName": "Типы летательных аппаратов",
+      "name": "Типы летательных аппаратов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "6f0c3821-2198-4e2c-bab6-ab163de217b5",
+      "label": "ERRORS",
+      "shortName": "Ошибки",
+      "name": "Ошибки",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8e17f6b0-58cb-4391-873c-23bfdd0763da",
+      "label": "TYPE_CHECKPOINT",
+      "shortName": "Тип пункта пропуска",
+      "name": "Тип пункта пропуска",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "21edea70-88a6-48a1-9ce6-65b8791589ef",
+      "label": "ACTION_CARGOES",
+      "shortName": "Действия в отношении задержанных грузов",
+      "name": "Действия в отношении задержанных грузов",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8bf26402-1641-40a5-9325-07f99967554a",
+      "label": "SERVICE_TASK",
+      "shortName": "Служебные задачи ПСКР",
+      "name": "Служебные задачи ПСКР",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "8f2f783f-dc6e-4055-ae6e-a84e1a3b341b",
+      "label": "SEX",
+      "shortName": "Пол",
+      "name": "Пол",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "027d361f-d34e-4a95-a994-990715443d25",
+      "label": "CALC_TASKS",
+      "shortName": "Расчетные задачи",
+      "name": "Расчетные задачи",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "a7a44871-32a9-4f5d-8781-4687c37e724d",
+      "label": "MILITARY_STATUS",
+      "shortName": "Воинское положение",
+      "name": "Воинское положение",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "07aca350-6f0d-11e4-9803-0800200c9a66",
+      "label": "NPD",
+      "shortName": "Нормативно-правовые документы",
+      "name": "Нормативно-правовые документы",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "90b658e8-3337-4adf-9337-b32b0b63dca9",
+      "label": "MOORING",
+      "shortName": "Швартовка",
+      "name": "Швартовка",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "e21c76de-7044-4ae2-be37-b9f86c21c7b4",
+      "label": "NATIONALITY",
+      "shortName": "Национальности",
+      "name": "Национальности",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "400d950a-03d1-4419-b7f0-0a2042aca0e7",
+      "label": "PORT_SEA_NW",
+      "shortName": "Морские порты",
+      "name": "Морские порты Северо-западного бассейнового филиала",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "112825b8-7834-4c61-b181-c5b61303a4ee",
+      "label": "PLANNING_DOCUMENTS",
+      "shortName": "Типы документов планирования",
+      "name": "Типы документов планирования",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    },
+    {
+      "id": "2de8d15a-2bdb-4a23-9e50-c8b87494b739",
+      "label": "GUARD_SHIP",
+      "shortName": "Типы ККС",
+      "name": "Типы ККС",
+      "parent": {
+        "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+        "name": "Классификатор"
+      },
+      "type": "RESOURCE",
+      "classifier": true
+    }
+  ]
+}

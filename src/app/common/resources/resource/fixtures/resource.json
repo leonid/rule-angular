@@ -1,0 +1,12 @@
+{
+  "id": "c28edc35-c08f-4a4c-bc53-c2c852fbdf27",
+  "label": "VISA_TYPE",
+  "shortName": "Класс виз",
+  "name": "Класс виз",
+  "parent": {
+    "id": "07c731af-f467-4773-a8bc-567edd895a9f",
+    "name": "Классификатор"
+  },
+  "type": "RESOURCE",
+  "classifier": true
+}

@@ -1,0 +1,91 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        ng-click="$hide()">&times;</button>
+                <h4 class="modal-title">Добавление ресурса</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="modal-body form-wizard">
+                    <form class="form-horizontal form-validation"
+                          name="resourceForm" role="form" novalidate>
+                        <aside class="col-sm-12 col-md-3 pl0">
+                            <ul class="list-table mb10">
+                                <li>
+                                    <profile-completeness-bar
+                                            type="vm.profileCompletenessType"></profile-completeness-bar>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li ng-class="{active: vm.state.includes('pps.resources.add.details')}"
+                                    class="text-center">
+                                    <button type="submit"
+                                            ng-click="vm.goToNextSection(resourceForm.$valid, resourceForm, 'pps.resources.add.details')">
+                                        <div class="menu-icon">1</div>
+                                        <i class="glyphicon glyphicon-user"></i>&nbsp;Описание
+                                        ресурса
+                                    </button>
+                                </li>
+                                <li ng-class="{active: vm.state.includes('pps.resources.add.attributes')}"
+                                    class="text-center">
+                                    <button type="submit"
+                                            ng-click="vm.goToNextSection(resourceForm.$valid, resourceForm, 'pps.resources.add.attributes')">
+                                        <div class="menu-icon">2</div>
+                                        <i class="glyphicon glyphicon-pencil"></i>&nbsp;Атрибуты
+                                        ресурса
+                                    </button>
+                                </li>
+                                <li ng-class="{active: vm.state.includes('pps.resources.add.complete')}"
+                                    class="text-center">
+                                    <button type="submit"
+                                            ng-click="vm.goToNextSection(resourceForm.$valid, resourceForm, 'pps.resources.add.complete')">
+                                        <div class="menu-icon"><span
+                                                ng-if="!vm.isAdmin">5</span><span
+                                                ng-if="vm.isAdmin">6</span>
+                                        </div>
+                                        <i class="glyphicon glyphicon-check"></i>&nbsp;Конец
+                                    </button>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <section class="well col-sm-12 col-md-9">
+                            <div ui-view="modal"></div>
+                        </section>
+
+                        <ul class="pager bwizard-buttons row">
+                            <div class="col-sm-12 col-md-9 col-md-offset-3 pl0 pr0">
+                                <li class="previous"
+                                    ng-class="{disabled: vm.state.includes('pps.resources.add.details')}">
+                                    <button ng-click="vm.goToPreviousSection()">
+                                        ← Назад
+                                    </button>
+                                </li>
+                                <li class="next"
+                                    ng-class="{disabled: vm.state.includes('pps.resources.add.complete')}">
+                                    <button ng-click="vm.goToNextSection(resourceForm.$valid, resourceForm)">
+                                        Дальше
+                                        →
+                                    </button>
+                                </li>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        ng-click="$hide()">Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
