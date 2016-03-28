@@ -1,0 +1,64 @@
+<div class="panel panel-default" szi="szi.forces.tsog.view">
+    <div class="panel-heading">
+        <button type="button"
+                class="btn btn-sm btn-default tooltipped tooltipped-se"
+                ng-click="npd.getList()"
+                aria-label="Обновить"><span
+                class="glyphicon glyphicon-repeat"></span>
+        </button>
+        <span class="journal-header">НПД</span>
+    </div>
+    <div class="panel-body">
+        <div ng-class="selectedId != null ? 'col-md-6' : 'col-md-12'"
+             class="no-user-select">
+            <div class="scroll-viewer">
+                <table class="table table-hover null-margin">
+                    <tbody>
+                    <tr ng-if="npd.breadcrumbs.length > 1"
+                        ng-dblclick="openCatalog(breadcrumbs[breadcrumbs.length - 2])"
+                        tooltip-placement="top-left" tooltip="На уровень вверх"
+                        tooltip-append-to-body="true" class="clickable">
+                        <td>
+                            <div class="pps-list-row">
+                                <a ui-sref="npd({ catalogId: npd.rootId, documentId: null})"
+                                   ng-if="npd.rootId">&middot;&nbsp;&middot;</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="catalog in npd.catalogs"
+                        ng-dblclick="openCatalog(catalog)" class="clickable">
+                        <td>
+                            <div class="pps-list-row">
+                        <span class="glyphicon color-primary"
+                              ng-class="{'glyphicon-folder-open': catalog.hasChildren, 'glyphicon-folder-close': !catalog.hasChildren}"
+
+                        ></span>&nbsp;
+                                <a ng-bind="::catalog.name"
+                                   ui-sref="npd({ catalogId: catalog.id, documentId: null})"
+                                   ng-if="catalog.hasChildren"></a>
+                                <span ng-bind="::catalog.name"
+                                      ng-if="!catalog.hasChildren"></span>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="doc in npd.list" ng-click="openDocument(doc)"
+                        ng-class="{success: doc.id == selectedId}"
+                        class="clickable" id="{{doc.id}}">
+                        <td>
+                            <div class="pps-list-row">
+                                <span class="glyphicon glyphicon-file color-primary"></span>&nbsp;
+                                <a ui-sref="npd({documentId: doc.id})"
+                                   ng-bind="::doc.name"
+                                   ng-click="showFormular(doc.id)"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>

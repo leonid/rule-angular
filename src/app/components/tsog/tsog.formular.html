@@ -1,0 +1,92 @@
+<div class="panel panel-default" ng-form="tsogEditForm">
+    <div class="panel-heading" ng-init="tab = 'main'">
+        <span class="sub-header">Формуляр ТСОГ</span>
+        <button ng-click="tab = 'main'" class="btn btn-default"
+                ng-class="{'active btn-primary': tab === 'main'}">Общие сведения
+        </button>
+        <!--<button ng-click="tab = 'inspections'" class="btn btn-default" ng-class="{'active btn-primary': tab === 'inspections'}">Проверки</button>-->
+        <div class="pull-right">
+            <!--<button type="button" class="btn btn-primary" ng-click="tsog.save()"-->
+            <!--ng-disabled="tsogEditForm.$invalid">Сохранить-->
+            <!--</button>-->
+            <button type="button" class="btn btn-default"
+                    ng-click="tsog.closeFormular()">Закрыть
+            </button>
+        </div>
+    </div>
+    <div class="panel-body form-horizontal" ng-show="tab === 'main'">
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Вид ТСОГ<span
+                    class="req"></span></label>
+            <div class="col-lg-4">
+                <select type="button"
+                        class="btn btn-default btn-block btn-select-left"
+                        ng-model="tsog.filter.tsogType"
+                        ng-options="t.label as t.name for t in tsog.data.tsogType.TSOG">
+                    <option value="">-- Выберите тип --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Группа ТСОГ<span
+                    class="req"></span></label>
+            <div class="col-lg-4">
+                <select type="button"
+                        class="btn btn-default btn-block btn-select-left"
+                        ng-model="tsog.filter.tsogGroup"
+                        ng-disabled="!tsog.filter.tsogType"
+                        ng-options="t.label as t.name for t in tsog.data.tsogGroup[tsog.filter.tsogType]">
+                    <option value="">-- Выберите группу --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Наименование<span
+                    class="req"></span></label>
+            <div class="col-lg-9">
+                <select type="button"
+                        class="btn btn-default btn-block btn-select-left"
+                        ng-model="tsog.filter.tsogName"
+                        ng-disabled="!tsog.filter.tsogGroup"
+                        ng-options="t.label as t.name for t in tsog.data.tsogName[tsog.filter.tsogGroup]">
+                    <option value="">-- Выберите наименование --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Описание</label>
+            <div class="col-lg-9">
+                <textarea class="form-control" ng-model="tsog.description"
+                          rows="5"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Номер ТСОГ
+                <small>(6 символов)</small>
+                <span class="req"></span></label>
+            <div class="col-lg-2">
+                <input type="number" class="form-control" ng-model="tsog.number"
+                       ng-maxlength="6" name="number" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Заводской номер</label>
+            <div class="col-lg-2">
+                <input type="text" class="form-control"
+                       ng-model="tsog.factoryNumber">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Инвентарный номер</label>
+            <div class="col-lg-2">
+                <input type="text" class="form-control"
+                       ng-model="tsog.inventoryNumber">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+

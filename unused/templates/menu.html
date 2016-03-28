@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <input type="text"
+       class="form-control input-sm ng-pristine ng-valid ng-touched"
+       style="width: 100%"
+       id="navSearch"
+       ng-model="data.menuSearch.text"
+       ng-change="filterMenu()"
+       ng-model-options="{ debounce: {'default': 200, 'blur': 0} }"
+       placeholder="Поиск"
+       autofocus="">
+  <ul>
+    <li><span>Мониторинг обстановки</span></li>
+    <li class="opened"><span>Силы и средства</span>
+      <ul>
+        <li><span>ТСОГ</span>
+          <ul>
+            <li class="selected"><a ui-sref-active="active" ui-sref="tsog" href="/">Реестр</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="opened"><span>Информационное обеспечение</span>
+      <ul>
+        <li><a ui-sref-active="active" ui-sref="npd({ catalogId: null, documentId: null})">НПД</a></li>
+        <li><a ui-sref-active="active" ui-sref="classifier({ catalogId: null, documentId: null})">Классификаторы</a></li>
+        <li><a ui-sref-active="active" ui-sref="nsi({ catalogId: null, documentId: null})">НСИ</a></li>
+        <li><a ui-sref-active="active" ui-sref="ufd({ catalogId: null, documentId: null})">УФД</a></li>
+        <li><a ui-sref-active="active" ui-sref="dicts({ catalogId: null, documentId: null})">Словари</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

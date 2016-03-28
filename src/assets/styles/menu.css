@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(../fonts/glyphicons-halflings-regular.eot);
+    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+.menu,
+menu {
+    padding: 0;
+    background-color: #FFF;
+    list-style: none;
+    padding: 4px;
+    margin: 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu input[type="text"] + ul {
+    margin: 8px 0 0;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 0 0 16px;
+}
+
+.menu span,
+.menu a {
+    padding: 0 0 0 24px;
+    position: relative;
+    display: block;
+}
+
+.menu li span:before,
+.menu li a:before {
+    position: absolute;
+    content: '\e080';
+    color: green;
+    margin-left: -20px;
+
+    top: 0;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu .opened span:before {
+    content: '\e114';
+}
+
+.menu .active {
+    background: #006400;
+    color: #FFF;
+    display: block;
+}
+
+.menu li li a:before {
+    content: '•';
+    line-height: 1;
+    margin-left: -16px;
+}
+
+.menu .active:before {
+    color: #FFF;
+}

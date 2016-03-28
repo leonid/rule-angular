@@ -1,0 +1,179 @@
+<div class="panel panel-default" szi="szi.forces.tsog.view">
+    <div class="panel-heading">
+        <button type="button"
+                class="btn btn-sm btn-default tooltipped tooltipped-se"
+                ng-click="tsog.getList()"
+                aria-label="Обновить">
+            <span class="glyphicon glyphicon-repeat"></span>
+        </button>
+        <span class="journal-header ">Реестр технических средств охраны границы</span>
+        <div class="pull-right">
+            <button type="button"
+                    class="btn btn-sm btn-primary tooltipped tooltipped-sw"
+                    ng-click="tsog.editTsog()" aria-label="Добавить ТСОГ"
+                    szi="szi.forces.tsog.add">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="panel panel-primary clearfix" ng-show="tsog">
+            <div class="panel-body form-horizontal">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Вид ТСОГ</label>
+                        <div class="col-lg-9">
+                            <select type="button"
+                                    class="btn btn-default btn-block btn-select-left"
+                                    ng-model="tsog.filter.tsogType"
+                                    ng-options="t.label as t.name for t in tsog.data.tsogType.TSOG">
+                                <option value="">-- Выберите тип --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Группа
+                            ТСОГ</label>
+                        <div class="col-lg-9">
+                            <select type="button"
+                                    class="btn btn-default btn-block btn-select-left"
+                                    ng-model="tsog.filter.tsogGroup"
+                                    ng-disabled="!tsog.filter.tsogType"
+                                    ng-options="t.label as t.name for t in tsog.data.tsogGroup[tsog.filter.tsogType]">
+                                <option value="">-- Выберите группу --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Наименование
+                            ТСОГ</label>
+                        <div class="col-lg-9">
+                            <select type="button"
+                                    class="btn btn-default btn-block btn-select-left"
+                                    ng-model="tsog.filter.tsogName"
+                                    ng-disabled="!tsog.filter.tsogGroup"
+                                    ng-options="t.label as t.name for t in tsog.data.tsogName[tsog.filter.tsogGroup]">
+                                <option value="">-- Выберите наименование --
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Состояние
+                            работоспособности</label>
+                        <div class="col-lg-9 btn-group">
+                            <label class="btn btn-default"
+                                   ng-model="tsog.filter.working"
+                                   btn-radio="null">Все</label>
+                            <label class="btn btn-default"
+                                   ng-model="tsog.filter.working"
+                                   btn-radio="true">Исправные</label>
+                            <label class="btn btn-default"
+                                   ng-model="tsog.filter.working"
+                                   btn-radio="false">Неисправные</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Подразделение</label>
+                        <div class="col-lg-9">
+                            <button orgstruct-picker
+                                    ng-model="tsog.filter.department"
+                                    current="curOrgOnly"
+                                    type-parent-label="ORGSTRUCT_TYPE"
+                                    class="btn btn-default btn-block btn-select-left"></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Период (с)</label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control"
+                                   ng-model="tsog.filter.startTime"
+                                   bs-datepicker
+                                   max-date="{{tsog.filter.endTime}}">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" class="form-control"
+                                   ng-model="tsog.filter.startTime"
+                                   bs-timepicker>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Период
+                            (по)</label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control"
+                                   ng-model="tsog.filter.endTime" bs-datepicker
+                                   min-date="{{tsog.filter.startTime}}">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" class="form-control"
+                                   ng-model="tsog.filter.endTime" bs-timepicker>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-primary btn-sm"
+                        ng-click="tsog.getList()">Фильтровать
+                </button>
+                <button type="button" class="btn btn-default btn-sm"
+                        ng-click="tsog.resetFilter()">Очистить
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div ng-if="!tsog.TSOG.length">Нет записей.</div>
+        <table ng-if="tsog.TSOG.length"
+               class="table table-hover table-condensed table-striped">
+            <thead>
+            <tr>
+                <th>ЕАСТК</th>
+                <th>Наименование ТСОГ</th>
+                <th>Номер ТСОГ</th>
+                <th>Тех.состояние/Время обновления</th>
+                <th>Всего устройств</th>
+                <th>Описание</th>
+                <th>Подразделение</th>
+                <th width="70"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="tsog in tsog.TSOG">
+                <td><span class="glyphicon"
+                          ng-class="tsog.eastk ? 'glyphicon-ok' : 'glyphicon-ban-circle'"></span>
+                </td>
+                <td>
+                    <a ng-click="viewTsog(tsog)"
+                       ng-bind="::tsog.tsogName.text"></a>
+                </td>
+                <td ng-bind="::tsog.number"></td>
+                <td>
+                    <span ng-bind="::tsog.currentState.text"></span>
+                    <span ng-bind="::tsog.updateTime | date"></span>
+                </td>
+                <td ng-bind="::tsog.childrenSize"></td>
+                <td>
+          <span ng-show="tsog.location">
+              <find-on-map feature-type="'tsog'" target="tsog"></find-on-map>
+          </span>
+                    <span ng-bind="::tsog.description"></span>
+                </td>
+                <td ng-bind="::tsog.department.text"></td>
+                <td>
+                    <button type="button" class="btn btn-xs btn-default"
+                            ng-click="tsog.editTsog(tsog)"
+                            szi="szi.forces.tsog.edit">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                    <button type="button" class="btn btn-xs btn-default"
+                            ng-click="tsog.remove(tsog)"
+                            szi="szi.forces.tsog.remove">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
