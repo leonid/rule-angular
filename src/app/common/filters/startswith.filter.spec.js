@@ -4,7 +4,7 @@ import 'angular-mocks'
 import './startswith.filter'
 
 describe( 'Helpers: startsWith', () => {
-  let nameStartsWithFilter, positions
+  let nameStartsWithFilter
 
   beforeEach( angular.mock.module( 'pps' ) )
 
@@ -13,7 +13,7 @@ describe( 'Helpers: startsWith', () => {
   } ) )
 
   it( 'should test starts with desired letter filter with array data', () => {
-    list = [
+    let list = [
       {
         id: '1',
         name: 'Judas'
@@ -27,7 +27,7 @@ describe( 'Helpers: startsWith', () => {
   } )
 
   it( 'should return empty string if position does not exist', () => {
-    list = [
+    let list = [
       {
         id: '1',
         name: 'Judas'

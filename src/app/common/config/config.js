@@ -1,8 +1,16 @@
-'use strict';
+'use strict'
 
-// import './config.#{ENV|environment}.js';
-import {ACCESS_LEVELS} from '../constants/constants.js';
+// import './config.#{ENV|environment}.js'
+import {ACCESS_LEVELS} from '../constants/constants.js'
 import {Config, Run, Inject} from '../../decorators/decorators'
+
+if ( NODE_ENV === 'test' ) {
+  require( './config.test' )
+} else if ( NODE_ENV === 'production' ) {
+  require( './config.prod' )
+} else {
+  require( './config.dev' )
+}
 
 class OnConfig {
   @Config()
@@ -11,33 +19,33 @@ class OnConfig {
     // overwrite the default behaviour for $uiViewScroll service (scroll to top of the page)
     $provide.decorator( '$uiViewScroll', ['$delegate', '$window', function ( $delegate, $window ) {
       return function () {
-        $window.scrollTo( 0, 0 );
-      };
-    }] );
+        $window.scrollTo( 0, 0 )
+      }
+    }] )
 
     /*********************************************************************
      * Route provider configuration based on these config constant values
      *********************************************************************/
     // set restful base API route
-    $httpProvider.interceptors.push( 'HttpApiUrlInterceptor' );
+    $httpProvider.interceptors.push( 'HttpApiUrlInterceptor' )
 
     // set authentication http token check
-    $httpProvider.interceptors.push( 'HttpAuthenticationInterceptor' );
+    $httpProvider.interceptors.push( 'HttpAuthenticationInterceptor' )
 
     // set retry http request if request failed
-    $httpProvider.interceptors.push( 'HttpRetryInterceptor' );
+    $httpProvider.interceptors.push( 'HttpRetryInterceptor' )
 
     // use the HTML5 History API
     $locationProvider.html5Mode( {
       enabled: true,
       requireBase: false
-    } );
+    } )
 
     // for any unmatched url, send to 404 page (Not page found)
-    $urlRouterProvider.otherwise( '/404' );
+    $urlRouterProvider.otherwise( '/404' )
 
     // the `when` method says if the url is `/home` redirect to `/schedule` what is basically our `home` for this application
-    $urlRouterProvider.when( '/home', '/main' );
+    $urlRouterProvider.when( '/home', '/main' )
   }
 }
 
@@ -45,46 +53,46 @@ class OnRun {
   @Run()
   @Inject( '$rootScope', '$state', '$log', 'AuthenticationService' )
   static runFactory( $rootScope, $state, $log, AuthenticationService ) {
-    $rootScope.currentUser = AuthenticationService.getCurrentUser();
-    $rootScope.ACCESS_LEVELS = ACCESS_LEVELS;
+    $rootScope.currentUser = AuthenticationService.getCurrentUser()
+    $rootScope.ACCESS_LEVELS = ACCESS_LEVELS
 
     $rootScope.$on( '$stateChangeStart', ( event, toState ) => {
       if ( toState.resolve ) {
-        $rootScope.isLoading = true;
+        $rootScope.isLoading = true
       }
 
       if ( !('data' in toState) || !('access' in toState.data) ) {
-        event.preventDefault();
-        $state.go( '403' );
+        event.preventDefault()
+        $state.go( '403' )
       } else if ( !AuthenticationService.isAuthorized( toState.data.access ) && toState.name !== 'auth.login' ) {
-        event.preventDefault();
+        event.preventDefault()
         if ( AuthenticationService.isAuthenticated() ) {
-          $state.go( '403' );
+          $state.go( '403' )
         } else {
-          $state.go( 'auth.login' );
+          $state.go( 'auth.login' )
         }
       } else if ( AuthenticationService.isAuthenticated() && toState.url === '/' ) {
-        event.preventDefault();
-        $state.go( 'pps.main' );
+        event.preventDefault()
+        $state.go( 'pps.main' )
       }
-    } );
+    } )
 
     $rootScope.$on( '$stateChangeSuccess', ( event, toState ) => {
       if ( toState.resolve ) {
-        $rootScope.isLoading = false;
+        $rootScope.isLoading = false
       }
-    } );
+    } )
 
     $rootScope.$on( '$stateChangeError', ( event, toState, toParams, fromState, fromParams, error ) => {
       if ( toState.resolve ) {
-        $rootScope.isLoading = false;
+        $rootScope.isLoading = false
       }
 
-      event.preventDefault();
-      $log.error( error.stack );
-      $state.go( '500' );
-    } );
+      event.preventDefault()
+      $log.error( error.stack )
+      $state.go( '500' )
+    } )
   }
 }
 
-export {OnConfig, OnRun};
+export {OnConfig, OnRun}

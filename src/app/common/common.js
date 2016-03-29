@@ -8,8 +8,8 @@
 // config
 import './config/config'
 
-// helpers
-import './helpers/position-label'
+// filters
+import './filters/position-label'
 
 // interceptors
 import './interceptors/http-api-url'

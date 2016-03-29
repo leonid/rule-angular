@@ -74,7 +74,7 @@ describe( 'constants', () => {
     expect( HEADER_API_VERSION ).toEqual( 'application/json' )
   } )
 
-  it( 'should contain sheader api version', () => {
+  it( 'should contain proper date format', () => {
     expect( AVAILABILITY_DATE_FORMAT ).toEqual( 'YYYYMMDD' )
   } )
 } )

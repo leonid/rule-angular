@@ -48,8 +48,8 @@ describe( 'Config', () => {
     expect( $urlRouterProvider.otherwise ).toHaveBeenCalledWith( '/404' )
   } )
 
-  it( 'should redirect to `/schedule` when url match `/home`', () => {
-    expect( $urlRouterProvider.when ).toHaveBeenCalledWith( '/home', '/schedule' )
+  it( 'should redirect to `/main` when url match `/home`', () => {
+    expect( $urlRouterProvider.when ).toHaveBeenCalledWith( '/home', '/main' )
   } )
 
   describe( 'Run', () => {
@@ -161,11 +161,11 @@ describe( 'Config', () => {
         const event = $rootScope.$broadcast( '$stateChangeStart', toState ) // the first argument is reserved for the event object (that's why we are not passing event object here)
 
         expect( event.defaultPrevented ).toEqual( true )
-        expect( $state.go ).toHaveBeenCalledWith( 'app.schedule' )
+        expect( $state.go ).toHaveBeenCalledWith( 'app.rules' )
         expect( AuthenticationService.isAuthenticated ).toHaveBeenCalled()
       } )
 
-      it( 'should not redirect to `app.schedule` when user is authenticated and toState url is not equal to `/`', () => {
+      it( 'should not redirect to `app.main` when user is authenticated and toState url is not equal to `/`', () => {
         spyOn( $state, 'go' )
         spyOn( AuthenticationService, 'isAuthorized' ).and.returnValue( true )
         spyOn( AuthenticationService, 'isAuthenticated' ).and.returnValue( true )
