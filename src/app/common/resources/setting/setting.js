@@ -5,7 +5,7 @@ if ( NODE_ENV === 'test' ) {
   require( './setting.mock.js' )
 }
 
-import AbstractResource from '../abstract-resource'
+import AbstractResource from '../abstract.resource'
 import {Service, Inject} from '../../../decorators/decorators'
 
 @Service( {

@@ -95,7 +95,7 @@ angular.module( 'mouseCapture', [] )
 
         $element.unbind( 'mousemove', mouseMove )
         $element.unbind( 'mouseup', mouseUp )
-      }
+      },
     }
   }]
 )

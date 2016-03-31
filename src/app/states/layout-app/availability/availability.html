@@ -6,7 +6,7 @@
         <div class="panel-body">
             <alert-danger has-error="vm.hasError"
                           error-message="vm.errorMessage"></alert-danger>
-            <div class="row mb15" mm-access-level="$root.ACCESS_LEVELS.manager">
+            <div class="row mb15" access-level="$root.ACCESS_LEVELS.manager">
                 <div class="col-md-3">
                     <select name="calendarViews" ng-model="vm.calendarView"
                             ng-change="vm.toggleView(vm.calendarView)"

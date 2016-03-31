@@ -131,6 +131,12 @@ function RouteConfig( stateName, options ) {
   }
 }
 
+function Module(module) {
+  return function decorator(target) {
+    target.$module = module
+  }
+}
+
 /**
  * Converts PascalCase to pascalCase
  * @param {string} string

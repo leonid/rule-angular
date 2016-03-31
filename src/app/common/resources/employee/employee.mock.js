@@ -2,7 +2,7 @@
 
 import employee from './fixtures/employee_1.json'
 import employees from './fixtures/employees.json'
-import AbstractResourceMock from '../abstract-resource-mock';
+import AbstractResourceMock from '../abstract.resource.mock'
 import {Run, Inject} from '../../../decorators/decorators'
 
 class EmployeeResourceMock extends AbstractResourceMock {

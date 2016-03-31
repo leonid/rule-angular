@@ -5,7 +5,7 @@ import {Directive, Inject} from '../../decorators/decorators'
 // const NG_IF = new WeakMap()
 // const AUTHENTICATION_SERVICE = new WeakMap()
 @Directive( {
-  selector: 'mm-access-level'
+  selector: 'access-level'
 } )
 class MmAccessLevel {
   constructor( ngIfDirective, AuthenticationService ) {

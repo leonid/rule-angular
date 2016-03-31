@@ -54,24 +54,16 @@
             </div>
         </div>
     </div>
-    <div class="form-group required">
+    <div class="form-group required" ng-class="{ 'has-error': employeeAccountDetailsForm.email.$touched && employeeAccountDetailsForm.email.$invalid }">
         <label class="control-label col-sm-4">Email</label>
         <div class="col-sm-5">
             <input name="email" type="email" ng-model="vm.employee.email"
                    ng-model-options="{ debounce: 500 }" class="form-control"
                    ng-maxlength="60" required mm-unique-email-validator>
             <div ng-if="employeeAccountDetailsForm.$submitted"
-                 ng-messages="employeeAccountDetailsForm.email.$error">
-                <div ng-message="unique" class="error">Email has already been
-                    taken.
-                </div>
-                <div ng-message="email" class="error">Invalid email.</div>
-                <div ng-message="required" class="error">This field is
-                    required.
-                </div>
-                <div ng-message="maxlength" class="error">This field text is too
-                    long (max 60 characters).
-                </div>
+                 ng-messages="employeeAccountDetailsForm.email.$error"
+                 ng-show="employeeAccountDetailsForm.email.$touched">
+                <div ng-messages-include="email.errors.html"></div>
             </div>
         </div>
     </div>

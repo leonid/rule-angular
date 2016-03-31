@@ -43,14 +43,14 @@
                         <i class="fa fa-dollar fa-fw"></i>&nbsp;Hourly Rate
                     </button>
                 </li>
-                <li mm-access-level="$root.ACCESS_LEVELS.admin"
+                <li access-level="$root.ACCESS_LEVELS.admin"
                     ng-class="{active: vm.router.includes('app.employees.edit.authorizations')}">
                     <button type="submit" class="text-left"
                             ng-click="vm.goToNextSection(employeeForm.$valid, employeeForm, 'app.employees.edit.authorizations')">
                         <i class="fa fa-lock fa-fw"></i>&nbsp;Authorizations
                     </button>
                 </li>
-                <li mm-access-level="$root.ACCESS_LEVELS.admin"
+                <li access-level="$root.ACCESS_LEVELS.admin"
                     ng-class="{active: vm.router.includes('app.employees.edit.password')}">
                     <button type="submit" class="text-left"
                             ng-click="vm.goToNextSection(employeeForm.$valid, employeeForm, 'app.employees.edit.password')">

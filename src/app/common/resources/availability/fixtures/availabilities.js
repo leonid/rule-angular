@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import moment from 'moment';
+import moment from 'moment'
 
-const employeeId = localStorage.getItem( 'employee-scheduling-test.user' ) ? JSON.parse( localStorage.getItem( 'employee-scheduling-test.user' ) ).id : null;
+const employeeId = localStorage.getItem( 'employee-scheduling-test.user' ) ? JSON.parse( localStorage.getItem( 'employee-scheduling-test.user' ) ).id : null
 const availabilities = [
   {
     id: `${employeeId}::${moment().add( 1, 'day' ).format( 'YYYYMMDD' )}`,
@@ -157,6 +157,6 @@ const availabilities = [
     availability: 'available',
     date: moment().add( 47, 'day' ).format( 'YYYYMMDD' )
   }
-];
+]
 
-export default availabilities;
+export default availabilities

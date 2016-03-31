@@ -1,4 +1,3 @@
-/* eslint-env jasmine */
 'use strict'
 
 import AbstractModel from './abstract.model'

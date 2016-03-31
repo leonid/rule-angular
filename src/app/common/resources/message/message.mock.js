@@ -1,6 +1,6 @@
 'use strict';
 
-import AbstractResourceMock from '../abstract-resource-mock';
+import AbstractResourceMock from '../abstract.resource.mock'
 import {Run, Inject} from '../../../decorators/decorators'
 
 class MessageResourceMock extends AbstractResourceMock {

@@ -18,8 +18,8 @@
     ]
   },
   "globals": {
-    "angular": true,
-    "NODE_ENV": true
+    "angular": false,
+    "NODE_ENV": false
   },
   "env": {
     "es6": true,

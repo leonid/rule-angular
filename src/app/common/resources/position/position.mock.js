@@ -2,7 +2,7 @@
 
 import position from './fixtures/position_1.json'
 import positions from './fixtures/positions.json'
-import AbstractResourceMock from '../abstract-resource-mock';
+import AbstractResourceMock from '../abstract.resource.mock'
 import {Run, Inject} from '../../../decorators/decorators'
 
 class PositionResourceMock extends AbstractResourceMock {

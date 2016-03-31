@@ -28,17 +28,26 @@
 
 * AngularJS, с использованием классов ES6
 * [ES7 decorators](https://github.com/wycats/javascript-decorators)
-* Unit тесты на ES6, Babel, Karma, Jasmine and Istanbul
+* Unit тесты на ES6, Babel, Karma, Jasmine and Istanbul [Slides](http://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules)
 * JSON Web Token ([JWT](http://jwt.io)) authentication
 * Авторизация пользователей по ролям
 * Разработка и сборка проекта с помощью [Webpack](https://webpack.github.io/), [Gulp](http://gulpjs.com/)
 * Mocked Backend Workflow - моки для разработки без бекэнда
 * Использование идей Angular 2.0 во время разработки на Angular 1.x
-* Связывание Rest-ресурсов и моделей ресурсов для оперирования коллекциями ресурсов [Medium](https://medium.com/@tomastrajan/model-pattern-for-angular-js-67494389d6f#.bgm6vy7cr)
+* Связывание Rest-ресурсов и моделей ресурсов для оперирования коллекциями ресурсов [Medium](https://slides.com/tomastrajan/component-and-model-pattern-for-angular-js)
 
-##<a name="features"></a>Возможности
+## <a name="features"></a>Планируемые возможности
 
-* Data driven documents
+* SVG - Data driven documents, модели данных для их визуального представления или их трансфомирование
+* Многоязычность
+* Формы(ng-form) и их валидация, обратная связь(ng-messages)
+* Локальное кеширование коллекций в IndexedDB(Local storage) с последующей репликацией через RestResource [Lazy remote service access] (http://blog.mindcrime-ilab.de/2014/12/10/lazy-remote-service-access-rest-and-indexeddb/)
+* Server Sent Event для обновления коллекций
+* Web Worker для работы с Remote API и Local Models
+* Версионность(ревизионность) коллекций
+* Веб-сокеты просто попробовать
+* Генерация Blob-контента, выгрузка PDF, spreadsheets, images и печать
+* горячие клавиши и комбинации для управления представлением
 
 ##<a name="folder-structure"></a>Структура проекта
 

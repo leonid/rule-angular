@@ -22,9 +22,6 @@ export const ACCESS_LEVELS = Object.freeze( {
 
 // http://labs.qandidate.com/blog/2014/10/16/using-the-accept-header-to-version-your-api/
 export const HEADER_API_VERSION = 'application/json'
-//'application/vnd.employee-scheduling.api+jsonversion=1charset=utf-8'
-
-// application/vnd.employee-scheduling.v1+json
 
 export const PROFILE_COMPLETENESS_TYPES = Object.freeze( {
   ACCOUNT: 'account',

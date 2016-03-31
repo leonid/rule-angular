@@ -1,3 +1,5 @@
+'use strict'
+
 class AbstractResource {
   constructor( http, route ) {
     this.http = http

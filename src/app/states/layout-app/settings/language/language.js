@@ -1,9 +1,4 @@
-/**
- * @author    Martin Micunda {@link http://martinmicunda.com}
- * @copyright Copyright (c) 2015, Martin Micunda
- * @license   The MIT License {@link http://opensource.org/licenses/MIT}
- */
-'use strict';
+'use strict'
 
 import template from './language.html'
 import {RouteConfig, Component, View, Inject} from '../../../../decorators/decorators'
@@ -24,23 +19,23 @@ import {RouteConfig, Component, View, Inject} from '../../../../decorators/decor
 @Inject( 'SettingModel', 'LanguageModel', 'FormService' )
 class Language {
   constructor( SettingModel, LanguageModel, FormService ) {
-    this.setting = SettingModel.getItem();
-    this.languages = LanguageModel.getCollection();
-    this.FormService = FormService;
-    this.SettingModel = SettingModel;
-    this.isSubmitting = null;
-    this.result = null;
-    this.saveButtonOptions = FormService.getSaveButtonOptions();
+    this.setting = SettingModel.getItem()
+    this.languages = LanguageModel.getCollection()
+    this.FormService = FormService
+    this.SettingModel = SettingModel
+    this.isSubmitting = null
+    this.result = null
+    this.saveButtonOptions = FormService.getSaveButtonOptions()
   }
 
   save( form ) {
     if ( !form.$valid ) {
-      return;
+      return
     }
-    this.isSubmitting = true;
-    this.FormService.save( this.SettingModel, this.setting, this, form );
+    this.isSubmitting = true
+    this.FormService.save( this.SettingModel, this.setting, this, form )
   }
 }
 
-export default Language;
+export default Language
 

@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-import './language/language.js';
-import './locations/locations.js';
-import './positions/positions.js';
-import './currency/currency.js';
+import './language/language.js'
+import './locations/locations.js'
+import './positions/positions.js'
+import './currency/currency.js'
 import template from './settings.html'
-import {ACCESS_LEVELS} from '../../../common/constants/constants';
+import {ACCESS_LEVELS} from '../../../common/constants/constants'
 import {RouteConfig, Component, View} from '../../../decorators/decorators.js'
 
 @RouteConfig( 'app.settings', {

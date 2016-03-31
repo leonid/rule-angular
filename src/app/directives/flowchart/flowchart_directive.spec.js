@@ -1,4 +1,4 @@
-describe( 'flowchart-directive', function () {
+describe( 'flowchart-directive', () => {
 
   var testObject
   var mockScope
@@ -18,7 +18,7 @@ describe( 'flowchart-directive', function () {
     mockScope = $rootScope.$new()
     mockDragging = createMockDragging()
     mockSvgElement = {
-      get: function () {
+      get: () => {
         return createMockSvgElement()
       }
     }
@@ -43,15 +43,15 @@ describe( 'flowchart-directive', function () {
   //
   var createMockElement = function ( attr, parent, scope ) {
     return {
-      attr: function () {
+      attr: () => {
         return attr
       },
 
-      parent: function () {
+      parent: () => {
         return parent
       },
 
-      scope: function () {
+      scope: () => {
         return scope || {}
       },
 
@@ -61,29 +61,27 @@ describe( 'flowchart-directive', function () {
   //
   // Create a mock node data model.
   //
-  var createMockNode = function ( inputConnectors, outputConnectors ) {
+  var createMockNode = ( inputConnectors, outputConnectors ) => {
     return {
-      x: function () {
+      x: () => {
         return 0
       },
-
-      y: function () {
+      y: () => {
         return 0
       },
-
       inputConnectors: inputConnectors || [],
       outputConnectors: outputConnectors || [],
       select: jasmine.createSpy(),
-      selected: function () {
+      selected: () => {
         return false
-      },
+      }
     }
   }
 
   //
   // Create a mock chart.
   //
-  var createMockChart = function ( mockNodes, mockConnections ) {
+  var createMockChart = ( mockNodes, mockConnections ) => {
     return {
       nodes: mockNodes,
       connections: mockConnections,
@@ -93,20 +91,20 @@ describe( 'flowchart-directive', function () {
       updateSelectedNodesLocation: jasmine.createSpy(),
       deselectAll: jasmine.createSpy(),
       createNewConnection: jasmine.createSpy(),
-      applySelectionRect: jasmine.createSpy(),
+      applySelectionRect: jasmine.createSpy()
     }
   }
 
   //
   // Create a mock dragging service.
   //
-  var createMockDragging = function () {
+  var createMockDragging = () => {
 
     var mockDragging = {
-      startDrag: function ( evt, config ) {
+      startDrag: ( evt, config ) => {
         mockDragging.evt = evt
         mockDragging.config = config
-      },
+      }
     }
 
     return mockDragging
@@ -115,63 +113,65 @@ describe( 'flowchart-directive', function () {
   //
   // Create a mock version of the SVG element.
   //
-  var createMockSvgElement = function () {
+  var createMockSvgElement = () => {
     return {
-      getScreenCTM: function () {
+      getScreenCTM: () => {
         return {
-          inverse: function () {
+          inverse: () => {
             return this
           },
         }
       },
 
-      createSVGPoint: function () {
+      createSVGPoint: () => {
         return {
           x: 0,
           y: 0,
-          matrixTransform: function () {
+          matrixTransform: () => {
             return this
           },
         }
       }
 
+
     }
   }
 
-  it( 'searchUp returns null when at root 1', function () {
+  it( 'searchUp returns null when at root 1', () => {
 
-    expect( testObject.searchUp( null, 'some-class' ) ).toBe( null )
+    expect( testObject.searchUp( null, "some-class" ) ).toBe( null )
   } )
 
-  it( 'searchUp returns null when at root 2', function () {
 
-    expect( testObject.searchUp( [], 'some-class' ) ).toBe( null )
+  it( 'searchUp returns null when at root 2', () => {
+
+    expect( testObject.searchUp( [], "some-class" ) ).toBe( null )
   } )
 
-  it( 'searchUp returns element when it has requested class', function () {
+  it( 'searchUp returns element when it has requested class', () => {
 
-    var whichClass = 'some-class'
+    var whichClass = "some-class"
     var mockElement = createMockElement( whichClass )
 
     expect( testObject.searchUp( mockElement, whichClass ) ).toBe( mockElement )
   } )
 
-  it( 'searchUp returns parent when it has requested class', function () {
+  it( 'searchUp returns parent when it has requested class', () => {
 
-    var whichClass = 'some-class'
+    var whichClass = "some-class"
     var mockParent = createMockElement( whichClass )
     var mockElement = createMockElement( '', mockParent )
 
     expect( testObject.searchUp( mockElement, whichClass ) ).toBe( mockParent )
   } )
 
-  it( 'hitTest returns result of elementFromPoint', function () {
+  it( 'hitTest returns result of elementFromPoint', () => {
 
     var mockElement = {}
 
     // Mock out the document.
     testObject.document = {
-      elementFromPoint: function () {
+      elementFromPoint: () => {
         return mockElement
       },
     }
@@ -179,7 +179,7 @@ describe( 'flowchart-directive', function () {
     expect( testObject.hitTest( 12, 30 ) ).toBe( mockElement )
   } )
 
-  it( 'checkForHit returns null when the hit element has no parent with requested class', function () {
+  it( 'checkForHit returns null when the hit element has no parent with requested class', () => {
 
     var mockElement = createMockElement( null, null )
 
@@ -187,14 +187,14 @@ describe( 'flowchart-directive', function () {
       return input
     }
 
-    expect( testObject.checkForHit( mockElement, 'some-class' ) ).toBe( null )
+    expect( testObject.checkForHit( mockElement, "some-class" ) ).toBe( null )
   } )
 
-  it( 'checkForHit returns the result of searchUp when found', function () {
+  it( 'checkForHit returns the result of searchUp when found', () => {
 
     var mockConnectorScope = {}
 
-    var whichClass = 'some-class'
+    var whichClass = "some-class"
     var mockElement = createMockElement( whichClass, null, mockConnectorScope )
 
     testObject.jQuery = function ( input ) {
@@ -204,7 +204,7 @@ describe( 'flowchart-directive', function () {
     expect( testObject.checkForHit( mockElement, whichClass ) ).toBe( mockConnectorScope )
   } )
 
-  it( 'checkForHit returns null when searchUp fails', function () {
+  it( 'checkForHit returns null when searchUp fails', () => {
 
     var mockElement = createMockElement( null, null, null )
 
@@ -212,10 +212,10 @@ describe( 'flowchart-directive', function () {
       return input
     }
 
-    expect( testObject.checkForHit( mockElement, 'some-class' ) ).toBe( null )
+    expect( testObject.checkForHit( mockElement, "some-class" ) ).toBe( null )
   } )
 
-  it( 'test node dragging is started on node mouse down', function () {
+  it( 'test node dragging is started on node mouse down', () => {
 
     mockDragging.startDrag = jasmine.createSpy()
 
@@ -228,7 +228,7 @@ describe( 'flowchart-directive', function () {
 
   } )
 
-  it( 'test node click handling is forwarded to view model', function () {
+  it( 'test node click handling is forwarded to view model', () => {
 
     mockScope.chart = createMockChart( [mockNode] )
 
@@ -244,7 +244,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.handleNodeClicked ).toHaveBeenCalledWith( mockNode, false )
   } )
 
-  it( 'test control + node click handling is forwarded to view model', function () {
+  it( 'test control + node click handling is forwarded to view model', () => {
 
     var mockNode = createMockNode()
 
@@ -261,7 +261,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.handleNodeClicked ).toHaveBeenCalledWith( mockNode, true )
   } )
 
-  it( 'test node dragging updates selected nodes location', function () {
+  it( 'test node dragging updates selected nodes location', () => {
 
     var mockEvt = {
       view: {
@@ -283,14 +283,14 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.updateSelectedNodesLocation ).toHaveBeenCalledWith( xIncrement, yIncrement )
   } )
 
-  it( 'test node dragging doesnt modify selection when node is already selected', function () {
+  it( 'test node dragging doesnt modify selection when node is already selected', () => {
 
     var mockNode1 = createMockNode()
     var mockNode2 = createMockNode()
 
     mockScope.chart = createMockChart( [mockNode1, mockNode2] )
 
-    mockNode2.selected = function () {
+    mockNode2.selected = () => {
       return true
     }
 
@@ -308,7 +308,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.deselectAll ).not.toHaveBeenCalled()
   } )
 
-  it( 'test node dragging selects node, when the node is not already selected', function () {
+  it( 'test node dragging selects node, when the node is not already selected', () => {
 
     var mockNode1 = createMockNode()
     var mockNode2 = createMockNode()
@@ -330,7 +330,7 @@ describe( 'flowchart-directive', function () {
     expect( mockNode2.select ).toHaveBeenCalled()
   } )
 
-  it( 'test connection click handling is forwarded to view model', function () {
+  it( 'test connection click handling is forwarded to view model', () => {
 
     var mockNode = createMockNode()
 
@@ -350,7 +350,7 @@ describe( 'flowchart-directive', function () {
     expect( mockEvt.preventDefault ).toHaveBeenCalled()
   } )
 
-  it( 'test control + connection click handling is forwarded to view model', function () {
+  it( 'test control + connection click handling is forwarded to view model', () => {
 
     var mockNode = createMockNode()
 
@@ -368,7 +368,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.handleConnectionMouseDown ).toHaveBeenCalledWith( mockConnection, true )
   } )
 
-  it( 'test selection is cleared when background is clicked', function () {
+  it( 'test selection is cleared when background is clicked', () => {
 
     var mockEvt = {}
 
@@ -381,7 +381,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.deselectAll ).toHaveBeenCalled()
   } )
 
-  it( 'test background mouse down commences selection dragging', function () {
+  it( 'test background mouse down commences selection dragging', () => {
 
     var mockNode = createMockNode()
     var mockEvt = {
@@ -400,7 +400,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.dragSelecting ).toBe( true )
   } )
 
-  it( 'test can end selection dragging', function () {
+  it( 'test can end selection dragging', () => {
 
     var mockNode = createMockNode()
     var mockEvt = {
@@ -421,7 +421,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.dragSelecting ).toBe( false )
   } )
 
-  it( 'test selection dragging ends by selecting nodes', function () {
+  it( 'test selection dragging ends by selecting nodes', () => {
 
     var mockNode = createMockNode()
     var mockEvt = {
@@ -452,7 +452,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.applySelectionRect ).toHaveBeenCalledWith( selectionRect )
   } )
 
-  it( 'test mouse down commences connection dragging', function () {
+  it( 'test mouse down commences connection dragging', () => {
 
     var mockNode = createMockNode()
     var mockEvt = {
@@ -471,7 +471,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.draggingConnection ).toBe( true )
   } )
 
-  it( 'test can end connection dragging', function () {
+  it( 'test can end connection dragging', () => {
 
     var mockNode = createMockNode()
     var mockEvt = {
@@ -492,7 +492,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.draggingConnection ).toBe( false )
   } )
 
-  it( 'test can make a connection by dragging', function () {
+  it( 'test can make a connection by dragging', () => {
 
     var mockNode = createMockNode()
     var mockDraggingConnector = {}
@@ -519,7 +519,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.createNewConnection ).toHaveBeenCalledWith( mockDraggingConnector, mockDragOverConnector )
   } )
 
-  it( 'test connection creation by dragging is cancelled when dragged over invalid connector', function () {
+  it( 'test connection creation by dragging is cancelled when dragged over invalid connector', () => {
 
     var mockNode = createMockNode()
     var mockDraggingConnector = {}
@@ -545,7 +545,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.chart.createNewConnection ).not.toHaveBeenCalled()
   } )
 
-  it( 'mouse move over connection caches the connection', function () {
+  it( 'mouse move over connection caches the connection', () => {
 
     var mockElement = {}
     var mockConnection = {}
@@ -565,7 +565,7 @@ describe( 'flowchart-directive', function () {
       return null
     }
 
-    testObject.hitTest = function () {
+    testObject.hitTest = () => {
       return mockElement
     }
 
@@ -574,7 +574,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.mouseOverConnection ).toBe( mockConnection )
   } )
 
-  it( 'test mouse over connection clears mouse over connector and node', function () {
+  it( 'test mouse over connection clears mouse over connector and node', () => {
 
     var mockElement = {}
     var mockConnection = {}
@@ -594,9 +594,10 @@ describe( 'flowchart-directive', function () {
       return null
     }
 
-    testObject.hitTest = function () {
+    testObject.hitTest = () => {
       return mockElement
     }
+
 
     mockScope.mouseOverConnector = {}
     mockScope.mouseOverNode = {}
@@ -607,7 +608,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.mouseOverNode ).toBe( null )
   } )
 
-  it( 'test mouseMove handles mouse over connector', function () {
+  it( 'test mouseMove handles mouse over connector', () => {
 
     var mockElement = {}
     var mockConnector = {}
@@ -627,7 +628,7 @@ describe( 'flowchart-directive', function () {
       return null
     }
 
-    testObject.hitTest = function () {
+    testObject.hitTest = () => {
       return mockElement
     }
 
@@ -636,7 +637,7 @@ describe( 'flowchart-directive', function () {
     expect( mockScope.mouseOverConnector ).toBe( mockConnector )
   } )
 
-  it( 'test mouseMove handles mouse over node', function () {
+  it( 'test mouseMove handles mouse over node', () => {
 
     var mockElement = {}
     var mockNode = {}
@@ -656,7 +657,7 @@ describe( 'flowchart-directive', function () {
       return null
     }
 
-    testObject.hitTest = function () {
+    testObject.hitTest = () => {
       return mockElement
     }
 

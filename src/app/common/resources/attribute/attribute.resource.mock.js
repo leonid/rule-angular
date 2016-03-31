@@ -1,7 +1,7 @@
 'use strict'
 
-import resource from './fixtures/attribute.fixture.json'
-import resources from './fixtures/attributes.fixture.json'
+import attribute from './fixtures/attribute.fixture.json'
+import attributes from './fixtures/attributes.fixture.json'
 import AbstractResourceMock from '../abstract.resource.mock'
 import {Run, Inject} from '../../../decorators/decorators'
 
@@ -23,6 +23,6 @@ class AttributeResourceMock extends AbstractResourceMock {
         return [200, dataLocal]
       } )
 
-    super.init( $httpBackend, localStorageService, 'resources', resource, resources, 'firstName' )
+    super.init( $httpBackend, localStorageService, 'attributes', attribute, attributes, 'firstName' )
   }
 }

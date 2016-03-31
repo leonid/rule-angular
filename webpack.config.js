@@ -23,7 +23,7 @@ function makeWebpackConfig( ) {
    * TEST is for generating test builds
    */
 
-  var DEV = NODE_ENV === 'development'
+  // var DEV = NODE_ENV === 'development'
   var BUILD = NODE_ENV === 'production'
   var TEST = NODE_ENV === 'test'
 
@@ -177,7 +177,8 @@ function makeWebpackConfig( ) {
       test: /\.js$/,
       exclude: [
         /node_modules/,
-        /\.spec\.js$/
+        /\.spec\.js$/,
+        /\.mock\.js$/
       ],
       loader: 'isparta-instrumenter'
     } )

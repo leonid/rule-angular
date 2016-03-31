@@ -1,57 +1,41 @@
 var webpackConfig = require('./webpack.config')
-// console.log(webpackConfig)
 
-// Reference: http://karma-runner.github.io/0.12/config/configuration-file.html
-module.exports = function karmaConfig(config) {
+module.exports = function (config) {
   config.set({
+    browsers: ['PhantomJS'],
     frameworks: ['jasmine'],
+    reporters: [
+      'dots',
+      'junit',
+      'spec',
+      'coverage'
+    ],
 
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    singleRun: false,
+    colors: true,
+    port: 9876,
+    browserNoActivityTimeout: 50000,
+
+    basepath: '',
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
       './node_modules/jasmine-async-sugar/jasmine-async-sugar.js',
 
-      { pattern: './src/tests.webpack.js', watched: false }
-
-      // Grab all files in the app folder that contain .test.
-      // 'src/*.spec.js',
-      // 'src/**/*.spec.js'
+      { pattern: 'webpack.karma.context.js' }
     ],
-
-    browsers: ['PhantomJS'],
-
-    reporters: [
-      'dots',
-      'junit',
-
-      // Reference: https://github.com/mlex/karma-spec-reporter
-      // Set reporter to print detailed results to console
-      'spec',
-
-      // Reference: https://github.com/karma-runner/karma-coverage
-      // Output code coverage files
-      'coverage'
-    ],
+    preprocessors: { 'webpack.karma.context.js': ['webpack', 'sourcemap'] },
+    exclude: [],
+    webpack: webpackConfig,
+    webpackMiddleware: {
+      noInfo: true
+    },
 
     junitReporter: {
       outputDir: 'test-reports/unit-test-report/',
       suite: 'unit'
     },
-
-    preprocessors: {
-      // Reference: http://webpack.github.io/docs/testing.html
-      // Reference: https://github.com/webpack/karma-webpack
-      // Convert files with webpack and load sourcemaps
-      // './src/**/*.spec.js': ['coverage', 'webpack', 'sourcemap']
-      './src/tests.webpack.js': ['webpack', 'sourcemap']
-
-      // 'src/**/*.js': ['webpack'],
-
-      // 'src/**/!(*.spec|*.mock|*-mock|*.e2e|*.po|*.test).js': ['webpack', 'sourcemap']
-    },
-
-    singleRun: true,
-    colors: true,
-
     specReporter: {
       maxLogLines: 5,               // limit number of lines logged per test
       suppressErrorSummary: true,   // do not print error summary
@@ -60,8 +44,6 @@ module.exports = function karmaConfig(config) {
       suppressSkipped: true,        // do not print information about skipped tests
       showSpecTiming: false         // print the time elapsed for each spec
     },
-
-    // Configure code coverage reporter
     coverageReporter: {
       instrumenters: {isparta: require('isparta')},
       instrumenter: {
@@ -75,12 +57,7 @@ module.exports = function karmaConfig(config) {
         {type: 'lcov'}, // will generate Icov report file and this report is published to coveralls
         {type: 'text-summary'} // it does not generate any file but it will print coverage to console
       ]
-    },
-
-    browserNoActivityTimeout: 50000,
-
-    webpack: webpackConfig
-
+    }
   })
 
   /**

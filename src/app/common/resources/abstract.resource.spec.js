@@ -2,7 +2,7 @@
 
 import 'angular';
 import 'angular-mocks';
-import AbstractResource from './abstract-resource.js';
+import AbstractResource from './abstract.resource.js';
 
 describe( 'AbstractResource', () => {
 

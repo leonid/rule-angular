@@ -1,6 +1,5 @@
-'use strict';
+'use strict'
 
-// import './authentication.mock.js#?ENV|mock';
 import {Service, Inject} from '../../../decorators/decorators'
 
 if ( NODE_ENV === 'test' ) {
@@ -13,33 +12,33 @@ if ( NODE_ENV === 'test' ) {
 @Inject( '$http', '$window' )
 class AuthenticationResource {
   constructor( $http, $window ) {
-    this.http = $http;
-    this.route = 'auth';
-    this.$window = $window;
+    this.http = $http
+    this.route = 'auth'
+    this.$window = $window
   }
 
   login( credentials ) {
-    const encoded = this.$window.btoa( JSON.stringify( credentials ) );
-    return this.http.post( `/${this.route}/login`, {credentials: encoded} );
+    const encoded = this.$window.btoa( JSON.stringify( credentials ) )
+    return this.http.post( `/${this.route}/login`, {credentials: encoded} )
   }
 
   logout() {
-    return this.http.get( `/${this.route}/logout` );
+    return this.http.get( `/${this.route}/logout` )
   }
 
   forgotPassword( email ) {
-    return this.http.post( `/${this.route}/forgot`, {email: email} );
+    return this.http.post( `/${this.route}/forgot`, {email: email} )
   }
 
   resetPassword( credentials, token ) {
-    const encoded = this.$window.btoa( JSON.stringify( credentials ) );
-    return this.http.post( `/${this.route}/password/${token}`, {credentials: encoded} );
+    const encoded = this.$window.btoa( JSON.stringify( credentials ) )
+    return this.http.post( `/${this.route}/password/${token}`, {credentials: encoded} )
   }
 
   updatePassword( credentials, id ) {
-    const encoded = this.$window.btoa( JSON.stringify( credentials ) );
-    return this.http.put( `/${this.route}/password/${id}`, {credentials: encoded} );
+    const encoded = this.$window.btoa( JSON.stringify( credentials ) )
+    return this.http.put( `/${this.route}/password/${id}`, {credentials: encoded} )
   }
 }
 
-export default AuthenticationResource;
+export default AuthenticationResource

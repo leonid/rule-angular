@@ -2,7 +2,7 @@
 
 import setting from './fixtures/setting_app.json'
 import settings from './fixtures/settings.json'
-import AbstractResourceMock from '../abstract-resource-mock'
+import AbstractResourceMock from '../abstract.resource.mock'
 import {Run, Inject} from '../../../decorators/decorators'
 
 class SettingResourceMock extends AbstractResourceMock {

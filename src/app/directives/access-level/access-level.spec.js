@@ -10,7 +10,7 @@ describe( 'MmAccessLevel', () => {
   let $compile, $rootScope, scope, render, element, controller, AuthenticationService, ngIfDirective,
     component = `
               <div>
-                  <p mm-access-level="$root.ACCESS_LEVELS.admin">Test!</p>
+                  <p access-level="$root.ACCESS_LEVELS.admin">Test!</p>
               </div>
             `
 
@@ -77,7 +77,7 @@ describe( 'MmAccessLevel', () => {
     spyOn( AuthenticationService, 'isAuthorized' )
     component = `
               <div>
-                  <p mm-access-level>Test!</p>
+                  <p access-level>Test!</p>
               </div>
             `
     element = render()

@@ -1,6 +1,6 @@
 'use strict';
 
-import AbstractModel from './abstract-model';
+import AbstractModel from './abstract.model';
 import {PROFILE_COMPLETENESS_TYPES} from '../../common/constants/constants';
 import {Service, Inject} from '../../decorators/decorators'
 

@@ -1,6 +1,6 @@
 'use strict';
 
-import AbstractModel from './abstract-model';
+import AbstractModel from './abstract.model';
 import {Service, Inject} from '../../decorators/decorators'
 
 @Service( {
