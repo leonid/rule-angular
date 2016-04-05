@@ -8,6 +8,18 @@
 Основная задача этого документа создать легко читаемый и разрабатываемый код приложений с использованием клиентских технологий. Каждое приложение разрабатывается внутри своего собственного окружения, но общие правила, используемые в разработке могут быть полезны для совместной работы и как платформа для обучения будущих разработчиков.
 
 ### Содержание
+
+Modularity: single responsibility, immediately invoked function expressions, module dependencies
+Application structure: architectural patters, folders structure
+Naming conventions: for modules, controllers, configuration and spec files
+Linting: JavaScript code checkers
+Testing: the approach in writing specs
+Comments: to produce documentation
+Startup logic: configuration, startup logic
+Routing: navigation flow, view composition
+Exception Handling: decorators, exception catchers, route errors
+Performance and Security: minification, obfuscation
+
 - [Javascript](#js)
     - [Test Facility](#js-test)
     - [Whitespace](#js-whitespace)

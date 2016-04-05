@@ -4,6 +4,18 @@
 
 ## Table of Contents
 
+
+Modularity: single responsibility, immediately invoked function expressions, module dependencies
+Application structure: architectural patters, folders structure
+Naming conventions: for modules, controllers, configuration and spec files
+Linting: JavaScript code checkers
+Testing: the approach in writing specs
+Comments: to produce documentation
+Startup logic: configuration, startup logic
+Routing: navigation flow, view composition
+Exception Handling: decorators, exception catchers, route errors
+Performance and Security: minification, obfuscation
+
   1. [Basic Rules](#basic-rules)
   1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
   1. [Naming](#naming)

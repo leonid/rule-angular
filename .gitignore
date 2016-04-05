@@ -2,6 +2,7 @@
 /dist
 /test-reports
 /node_modules
+/docs
 ### OSX template
 .DS_Store
 .AppleDouble
